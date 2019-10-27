@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030257F023662C8B00A84312 /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030257EE23662C8B00A84312 /* FoodItemCell.swift */; };
+		030257F123662C8B00A84312 /* FoodItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030257EF23662C8B00A84312 /* FoodItemCell.xib */; };
+		030257F323662FE500A84312 /* QuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030257F223662FE500A84312 /* QuantityView.swift */; };
+		030257F523662FEF00A84312 /* QuantityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030257F423662FEF00A84312 /* QuantityView.xib */; };
+		035599B32366087F001851CF /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599B22366087F001851CF /* CustomTabBar.swift */; };
+		035599B523660888001851CF /* CustomTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 035599B423660888001851CF /* CustomTabBar.xib */; };
+		035599B72366104A001851CF /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599B623661049001851CF /* UIView+Extensions.swift */; };
+		035599B9236611C2001851CF /* AnimationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599B8236611C2001851CF /* AnimationsFactory.swift */; };
+		035599BB2366152D001851CF /* ViewController+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599BA2366152D001851CF /* ViewController+TabBar.swift */; };
+		035599BD2366220D001851CF /* ResturantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599BC2366220D001851CF /* ResturantViewController.swift */; };
+		035599C5236625F5001851CF /* RestDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599C3236625F5001851CF /* RestDetailsHeader.swift */; };
+		035599C6236625F5001851CF /* RestDetailsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 035599C4236625F5001851CF /* RestDetailsHeader.xib */; };
+		035599C823662675001851CF /* ResturantViewController+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599C723662675001851CF /* ResturantViewController+Delegates.swift */; };
 		0365D07D23623927005729FE /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365D07B23623927005729FE /* GenreCell.swift */; };
 		0365D07E23623927005729FE /* GenreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0365D07C23623927005729FE /* GenreCell.xib */; };
 		0376568C236214870009DD42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376568B236214870009DD42 /* AppDelegate.swift */; };
@@ -30,6 +43,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030257EE23662C8B00A84312 /* FoodItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
+		030257EF23662C8B00A84312 /* FoodItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodItemCell.xib; sourceTree = "<group>"; };
+		030257F223662FE500A84312 /* QuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityView.swift; sourceTree = "<group>"; };
+		030257F423662FEF00A84312 /* QuantityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuantityView.xib; sourceTree = "<group>"; };
+		035599B22366087F001851CF /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		035599B423660888001851CF /* CustomTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBar.xib; sourceTree = "<group>"; };
+		035599B623661049001851CF /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		035599B8236611C2001851CF /* AnimationsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsFactory.swift; sourceTree = "<group>"; };
+		035599BA2366152D001851CF /* ViewController+TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TabBar.swift"; sourceTree = "<group>"; };
+		035599BC2366220D001851CF /* ResturantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantViewController.swift; sourceTree = "<group>"; };
+		035599C3236625F5001851CF /* RestDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestDetailsHeader.swift; sourceTree = "<group>"; };
+		035599C4236625F5001851CF /* RestDetailsHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestDetailsHeader.xib; sourceTree = "<group>"; };
+		035599C723662675001851CF /* ResturantViewController+Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResturantViewController+Delegates.swift"; sourceTree = "<group>"; };
 		0365D07B23623927005729FE /* GenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
 		0365D07C23623927005729FE /* GenreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenreCell.xib; sourceTree = "<group>"; };
 		03765688236214870009DD42 /* FoodDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +91,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		035599BE23662296001851CF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0376568D236214870009DD42 /* ViewController.swift */,
+				037656A523621AF60009DD42 /* ViewController+Delegates.swift */,
+				035599BA2366152D001851CF /* ViewController+TabBar.swift */,
+				035599C1236622D8001851CF /* Top Section */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		035599BF236622A2001851CF /* City Header */ = {
+			isa = PBXGroup;
+			children = (
+				0376569D236216AC0009DD42 /* CityHeaderCell.swift */,
+				0376569E236216AC0009DD42 /* CityHeaderCell.xib */,
+			);
+			path = "City Header";
+			sourceTree = "<group>";
+		};
+		035599C0236622B5001851CF /* Circles Collection */ = {
+			isa = PBXGroup;
+			children = (
+				037656A123621A740009DD42 /* RestTypesCell.swift */,
+				037656A223621A740009DD42 /* RestTypesCell.xib */,
+				035599C2236622EB001851CF /* Circle Cell */,
+			);
+			path = "Circles Collection";
+			sourceTree = "<group>";
+		};
+		035599C1236622D8001851CF /* Top Section */ = {
+			isa = PBXGroup;
+			children = (
+				035599BF236622A2001851CF /* City Header */,
+				035599C0236622B5001851CF /* Circles Collection */,
+			);
+			path = "Top Section";
+			sourceTree = "<group>";
+		};
+		035599C2236622EB001851CF /* Circle Cell */ = {
+			isa = PBXGroup;
+			children = (
+				037656AA23621EAC0009DD42 /* RestTypeCell.swift */,
+				037656AB23621EAC0009DD42 /* RestTypeCell.xib */,
+			);
+			path = "Circle Cell";
+			sourceTree = "<group>";
+		};
 		0376567F236214870009DD42 = {
 			isa = PBXGroup;
 			children = (
@@ -85,20 +159,24 @@
 			isa = PBXGroup;
 			children = (
 				0376568B236214870009DD42 /* AppDelegate.swift */,
-				0376568D236214870009DD42 /* ViewController.swift */,
-				037656A523621AF60009DD42 /* ViewController+Delegates.swift */,
-				0376569D236216AC0009DD42 /* CityHeaderCell.swift */,
-				0376569E236216AC0009DD42 /* CityHeaderCell.xib */,
-				037656A123621A740009DD42 /* RestTypesCell.swift */,
-				037656A223621A740009DD42 /* RestTypesCell.xib */,
-				037656AA23621EAC0009DD42 /* RestTypeCell.swift */,
-				037656AB23621EAC0009DD42 /* RestTypeCell.xib */,
+				035599BE23662296001851CF /* Home */,
 				037656B0236227440009DD42 /* ResturantsHeaderCell.swift */,
 				037656B1236227440009DD42 /* ResturantsHeaderCell.xib */,
 				037656B423622EDF0009DD42 /* ResturantCell.swift */,
 				037656B523622EDF0009DD42 /* ResturantCell.xib */,
 				0365D07B23623927005729FE /* GenreCell.swift */,
 				0365D07C23623927005729FE /* GenreCell.xib */,
+				035599B22366087F001851CF /* CustomTabBar.swift */,
+				035599B423660888001851CF /* CustomTabBar.xib */,
+				035599B8236611C2001851CF /* AnimationsFactory.swift */,
+				035599BC2366220D001851CF /* ResturantViewController.swift */,
+				035599C723662675001851CF /* ResturantViewController+Delegates.swift */,
+				035599C3236625F5001851CF /* RestDetailsHeader.swift */,
+				035599C4236625F5001851CF /* RestDetailsHeader.xib */,
+				030257EE23662C8B00A84312 /* FoodItemCell.swift */,
+				030257EF23662C8B00A84312 /* FoodItemCell.xib */,
+				030257F223662FE500A84312 /* QuantityView.swift */,
+				030257F423662FEF00A84312 /* QuantityView.xib */,
 				037656A923621D040009DD42 /* Common */,
 				0376568F236214870009DD42 /* Main.storyboard */,
 				03765692236214880009DD42 /* Assets.xcassets */,
@@ -112,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				037656A723621CFE0009DD42 /* UITableView+Extensions.swift */,
+				035599B623661049001851CF /* UIView+Extensions.swift */,
 				037656AE236221410009DD42 /* Inspectables.swift */,
 			);
 			path = Common;
@@ -175,8 +254,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030257F523662FEF00A84312 /* QuantityView.xib in Resources */,
 				037656B3236227440009DD42 /* ResturantsHeaderCell.xib in Resources */,
+				035599C6236625F5001851CF /* RestDetailsHeader.xib in Resources */,
 				03765696236214880009DD42 /* LaunchScreen.storyboard in Resources */,
+				035599B523660888001851CF /* CustomTabBar.xib in Resources */,
+				030257F123662C8B00A84312 /* FoodItemCell.xib in Resources */,
 				037656B723622EDF0009DD42 /* ResturantCell.xib in Resources */,
 				037656AD23621EAC0009DD42 /* RestTypeCell.xib in Resources */,
 				037656A423621A740009DD42 /* RestTypesCell.xib in Resources */,
@@ -196,15 +279,24 @@
 			files = (
 				0376568E236214870009DD42 /* ViewController.swift in Sources */,
 				037656A323621A740009DD42 /* RestTypesCell.swift in Sources */,
+				035599C5236625F5001851CF /* RestDetailsHeader.swift in Sources */,
+				030257F323662FE500A84312 /* QuantityView.swift in Sources */,
 				037656AF236221410009DD42 /* Inspectables.swift in Sources */,
+				035599B9236611C2001851CF /* AnimationsFactory.swift in Sources */,
 				037656B2236227440009DD42 /* ResturantsHeaderCell.swift in Sources */,
+				035599B32366087F001851CF /* CustomTabBar.swift in Sources */,
+				035599B72366104A001851CF /* UIView+Extensions.swift in Sources */,
 				037656AC23621EAC0009DD42 /* RestTypeCell.swift in Sources */,
 				0376568C236214870009DD42 /* AppDelegate.swift in Sources */,
 				037656A823621CFE0009DD42 /* UITableView+Extensions.swift in Sources */,
+				030257F023662C8B00A84312 /* FoodItemCell.swift in Sources */,
 				037656A623621AF60009DD42 /* ViewController+Delegates.swift in Sources */,
+				035599C823662675001851CF /* ResturantViewController+Delegates.swift in Sources */,
+				035599BB2366152D001851CF /* ViewController+TabBar.swift in Sources */,
 				0365D07D23623927005729FE /* GenreCell.swift in Sources */,
 				037656B623622EDF0009DD42 /* ResturantCell.swift in Sources */,
 				0376569F236216AC0009DD42 /* CityHeaderCell.swift in Sources */,
+				035599BD2366220D001851CF /* ResturantViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

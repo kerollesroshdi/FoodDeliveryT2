@@ -32,7 +32,7 @@
                     <constraint firstItem="N7e-oR-kmM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uSp-w7-CWu"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="H2p-sc-9uM" id="P2C-Q0-9in"/>

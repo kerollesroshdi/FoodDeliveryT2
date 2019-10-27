@@ -12,7 +12,7 @@ class ResturantsHeaderCell: UITableViewHeaderFooterView {
     @IBOutlet weak var containerView: UIView!
     
     lazy var cornerMask: CAShapeLayer = {
-        let path = UIBezierPath(roundedRect: CGRect.init(x: 0, y: 0, width: containerView.bounds.width - 60, height: containerView.bounds.height), byRoundingCorners: [.topRight, .topLeft], cornerRadii: CGSize(width: 35, height: 35))
+        let path = UIBezierPath(roundedRect: UIScreen.main.bounds, byRoundingCorners: [.topRight, .topLeft], cornerRadii: CGSize(width: 35, height: 35))
         
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath
@@ -24,8 +24,7 @@ class ResturantsHeaderCell: UITableViewHeaderFooterView {
         super.awakeFromNib()
         containerView.layer.mask = cornerMask
         
-        // Initialization code
     }
 
-
+    
 }
