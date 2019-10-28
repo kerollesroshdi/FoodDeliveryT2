@@ -9,7 +9,14 @@
 import UIKit
 
 class RestTypesCell: UITableViewCell {
-
+    var items: [CircleModel]?{
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
+    var didSelectItem: ( (CircleModel) -> () )?
+    
     @IBOutlet weak var collectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,15 +37,21 @@ class RestTypesCell: UITableViewCell {
 
 extension RestTypesCell: UICollectionViewDelegate, UICollectionViewDataSource {
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let item = items?[indexPath.row] {
+            didSelectItem?(item)
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item = self.items?[indexPath.row]
        let cell = collectionView.dequeue(indexPath: indexPath) as RestTypeCell
-        
+        cell.configure(item)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.items?.count ?? 0
     }
     
 }

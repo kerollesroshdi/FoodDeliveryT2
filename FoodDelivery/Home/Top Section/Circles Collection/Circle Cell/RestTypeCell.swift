@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class RestTypeCell: UICollectionViewCell {
     
     @IBOutlet weak var img: UIImageView!
@@ -24,6 +24,14 @@ class RestTypeCell: UICollectionViewCell {
         self.layer.shadowOpacity = 0
         self.titleLabel.alpha = 0.7
         titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .regular)
+    }
+    
+    func configure(_ model: CircleModel?){
+        guard let model = model else { return }
+        self.titleLabel.text = model.title
+        if let image = model.image {
+            self.img.kf.setImage(with: URL(string: image))
+        }
     }
     
     override var isSelected: Bool {

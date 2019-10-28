@@ -9,6 +9,9 @@
 import UIKit
 
 class ResturantCell: UITableViewCell {
+    @IBOutlet weak var restTitle: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var img: UIImageView!
 
     @IBOutlet weak var FoodGenreCollectionView: UICollectionView!
     override func awakeFromNib() {
@@ -18,6 +21,15 @@ class ResturantCell: UITableViewCell {
         FoodGenreCollectionView.registerCellNib(cellClass: GenreCell.self)
         selectionStyle = .none
         // Initialization code
+    }
+    
+    func configure(_ item: Resturant?){
+        guard let item = item else { return }
+        restTitle.text = item.title
+        ratingLabel.text = "\(item.rating)"
+        if let image = item.image {
+            img.kf.setImage(with: URL(string: image))
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

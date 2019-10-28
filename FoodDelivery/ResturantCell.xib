@@ -265,12 +265,15 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="FoodGenreCollectionView" destination="LeP-xq-tDs" id="cH2-bf-K4o"/>
+                <outlet property="img" destination="BQf-WZ-c3C" id="r2f-yA-2eW"/>
+                <outlet property="ratingLabel" destination="LIW-Su-Tbl" id="EmK-r0-8fN"/>
+                <outlet property="restTitle" destination="g5E-Ak-NFc" id="axn-FT-5mM"/>
             </connections>
             <point key="canvasLocation" x="152.17391304347828" y="120.20089285714285"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="like" width="19" height="17"/>
+        <image name="like" width="23" height="20"/>
         <image name="restImage" width="1800" height="1200"/>
         <image name="star" width="11" height="12"/>
     </resources>

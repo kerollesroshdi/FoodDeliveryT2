@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import Alamofire
+import Toast_Swift
 
 class ViewController: UIViewController {
-
+    var Resturants: [Resturant]?
+    var data: Home?
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tabBar: CustomTabBar!
+    
+    func displayError(_ text: String){
+        let alert = UIAlertController(title: text, message: text, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "done", style: .default, handler: nil)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +29,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         registerCells()
         tabBar.delegate = self
+        getTopData()
         // Do any additional setup after loading the view.
     }
     
@@ -28,6 +39,42 @@ class ViewController: UIViewController {
         
         tableView.registerHeaderNib(cellClass: ResturantsHeaderCell.self)
         tableView.registerCellNib(cellClass: ResturantCell.self)
+    }
+    
+    
+    func getTopData(){
+        self.view.makeToastActivity(.center)
+        NetworkClient.performRequest(Home.self, router: .Home, success: { (models) in
+            self.view.hideToastActivity()
+            print("I got data")
+            print(models)
+            self.data = models
+            self.tableView.reloadData()
+        }) { (error) in
+            self.view.hideToastActivity()
+            guard let error = error as? BaseError else { return }
+            if case .other(let error) = error {
+                //                self.displayError(error )
+            } else {
+                //                self.displayError(error.MyDescription)
+            }
+            
+        }
+    }
+
+    
+    func didSelectItem(_ item: CircleModel){
+        guard let id = item.id else { return }
+        self.view.makeToastActivity(.center)
+        NetworkClient.performRequest([Resturant].self, router: .RestData(id: id), success: { (models) in
+            self.view.hideToastActivity()
+            self.Resturants = models
+            self.tableView.reloadSections(IndexSet(integersIn: 1...1), with: .left)
+            print(models)
+        }) { (error) in
+            self.view.hideToastActivity()
+            self.displayError(error.localizedDescription)
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

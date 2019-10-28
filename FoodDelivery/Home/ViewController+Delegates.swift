@@ -33,12 +33,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(indexPath.section == 0){
+            let item = self.data?.types
             let cell = tableView.dequeue() as RestTypesCell
-            
+            cell.items = item
+            cell.didSelectItem = { [weak self] item in
+                self?.didSelectItem(item)
+            }
             return cell
         } else {
+            let item = self.Resturants?[indexPath.row]
             let cell = tableView.dequeue() as ResturantCell
-            
+            cell.configure(item)
             return cell
         }
         
@@ -48,12 +53,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if(section == 0){
             return 1
         } else {
-            return 5
+            return Resturants?.count ?? 0
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
+    
     
 }
