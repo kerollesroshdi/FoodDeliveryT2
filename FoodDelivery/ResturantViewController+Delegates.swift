@@ -25,8 +25,9 @@ extension ResturantViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = self.foodData?[indexPath.row]
         let cell = tableView.dequeue() as FoodItemCell
-        
+        cell.configure(item)
         return cell
     }
     
@@ -34,7 +35,7 @@ extension ResturantViewController: UITableViewDelegate, UITableViewDataSource {
         if(section == 0){
             return 0
         } else {
-            return 10
+            return foodData?.count ?? 0
         }
     }
     

@@ -11,11 +11,16 @@
 		030257F123662C8B00A84312 /* FoodItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030257EF23662C8B00A84312 /* FoodItemCell.xib */; };
 		030257F323662FE500A84312 /* QuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030257F223662FE500A84312 /* QuantityView.swift */; };
 		030257F523662FEF00A84312 /* QuantityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030257F423662FEF00A84312 /* QuantityView.xib */; };
+		0319632B2368B2D000EBEB10 /* ViewController+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319632A2368B2D000EBEB10 /* ViewController+TabBar.swift */; };
+		0319632D2368B5A600EBEB10 /* PeekAndPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319632C2368B5A600EBEB10 /* PeekAndPopViewController.swift */; };
+		0319632F2368BAFC00EBEB10 /* ResturantFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319632E2368BAFC00EBEB10 /* ResturantFood.swift */; };
+		031963322368BFDB00EBEB10 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031963312368BFDB00EBEB10 /* CartManager.swift */; };
+		031963342368D02400EBEB10 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031963332368D02400EBEB10 /* BaseTableViewCell.swift */; };
 		035599B32366087F001851CF /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599B22366087F001851CF /* CustomTabBar.swift */; };
 		035599B523660888001851CF /* CustomTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 035599B423660888001851CF /* CustomTabBar.xib */; };
 		035599B72366104A001851CF /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599B623661049001851CF /* UIView+Extensions.swift */; };
 		035599B9236611C2001851CF /* AnimationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599B8236611C2001851CF /* AnimationsFactory.swift */; };
-		035599BB2366152D001851CF /* ViewController+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599BA2366152D001851CF /* ViewController+TabBar.swift */; };
+		035599BB2366152D001851CF /* ViewController+3DTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599BA2366152D001851CF /* ViewController+3DTouch.swift */; };
 		035599BD2366220D001851CF /* ResturantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599BC2366220D001851CF /* ResturantViewController.swift */; };
 		035599C5236625F5001851CF /* RestDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035599C3236625F5001851CF /* RestDetailsHeader.swift */; };
 		035599C6236625F5001851CF /* RestDetailsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 035599C4236625F5001851CF /* RestDetailsHeader.xib */; };
@@ -55,11 +60,16 @@
 		030257EF23662C8B00A84312 /* FoodItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodItemCell.xib; sourceTree = "<group>"; };
 		030257F223662FE500A84312 /* QuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityView.swift; sourceTree = "<group>"; };
 		030257F423662FEF00A84312 /* QuantityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuantityView.xib; sourceTree = "<group>"; };
+		0319632A2368B2D000EBEB10 /* ViewController+TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TabBar.swift"; sourceTree = "<group>"; };
+		0319632C2368B5A600EBEB10 /* PeekAndPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekAndPopViewController.swift; sourceTree = "<group>"; };
+		0319632E2368BAFC00EBEB10 /* ResturantFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantFood.swift; sourceTree = "<group>"; };
+		031963312368BFDB00EBEB10 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		031963332368D02400EBEB10 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		035599B22366087F001851CF /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		035599B423660888001851CF /* CustomTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBar.xib; sourceTree = "<group>"; };
 		035599B623661049001851CF /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		035599B8236611C2001851CF /* AnimationsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsFactory.swift; sourceTree = "<group>"; };
-		035599BA2366152D001851CF /* ViewController+TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TabBar.swift"; sourceTree = "<group>"; };
+		035599BA2366152D001851CF /* ViewController+3DTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+3DTouch.swift"; sourceTree = "<group>"; };
 		035599BC2366220D001851CF /* ResturantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantViewController.swift; sourceTree = "<group>"; };
 		035599C3236625F5001851CF /* RestDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestDetailsHeader.swift; sourceTree = "<group>"; };
 		035599C4236625F5001851CF /* RestDetailsHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestDetailsHeader.xib; sourceTree = "<group>"; };
@@ -110,12 +120,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031963302368BFD400EBEB10 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				031963312368BFDB00EBEB10 /* CartManager.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		035599BE23662296001851CF /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				0376568D236214870009DD42 /* ViewController.swift */,
 				037656A523621AF60009DD42 /* ViewController+Delegates.swift */,
-				035599BA2366152D001851CF /* ViewController+TabBar.swift */,
+				035599BA2366152D001851CF /* ViewController+3DTouch.swift */,
+				0319632A2368B2D000EBEB10 /* ViewController+TabBar.swift */,
 				035599C1236622D8001851CF /* Top Section */,
 			);
 			path = Home;
@@ -180,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				0376568B236214870009DD42 /* AppDelegate.swift */,
+				031963302368BFD400EBEB10 /* Cart */,
 				03E9DD2523676403001E2346 /* Models */,
 				03E9DD1E23675CD2001E2346 /* Network */,
 				035599BE23662296001851CF /* Home */,
@@ -200,6 +220,7 @@
 				030257EF23662C8B00A84312 /* FoodItemCell.xib */,
 				030257F223662FE500A84312 /* QuantityView.swift */,
 				030257F423662FEF00A84312 /* QuantityView.xib */,
+				0319632C2368B5A600EBEB10 /* PeekAndPopViewController.swift */,
 				037656A923621D040009DD42 /* Common */,
 				0376568F236214870009DD42 /* Main.storyboard */,
 				03765692236214880009DD42 /* Assets.xcassets */,
@@ -215,6 +236,7 @@
 				037656A723621CFE0009DD42 /* UITableView+Extensions.swift */,
 				035599B623661049001851CF /* UIView+Extensions.swift */,
 				037656AE236221410009DD42 /* Inspectables.swift */,
+				031963332368D02400EBEB10 /* BaseTableViewCell.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -236,6 +258,7 @@
 			children = (
 				03E9DD26236764C9001E2346 /* Home.swift */,
 				03AD213A236781360030DD18 /* Resturant.swift */,
+				0319632E2368BAFC00EBEB10 /* ResturantFood.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -369,6 +392,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -377,6 +401,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,20 +428,25 @@
 				035599B72366104A001851CF /* UIView+Extensions.swift in Sources */,
 				037656AC23621EAC0009DD42 /* RestTypeCell.swift in Sources */,
 				0376568C236214870009DD42 /* AppDelegate.swift in Sources */,
+				0319632F2368BAFC00EBEB10 /* ResturantFood.swift in Sources */,
 				03AD2139236767E10030DD18 /* AppModel.swift in Sources */,
 				03E9DD2023675CF3001E2346 /* Constants.swift in Sources */,
 				03AD213B236781360030DD18 /* Resturant.swift in Sources */,
+				031963342368D02400EBEB10 /* BaseTableViewCell.swift in Sources */,
 				037656A823621CFE0009DD42 /* UITableView+Extensions.swift in Sources */,
 				03AD2137236766560030DD18 /* BaseError.swift in Sources */,
 				030257F023662C8B00A84312 /* FoodItemCell.swift in Sources */,
 				037656A623621AF60009DD42 /* ViewController+Delegates.swift in Sources */,
 				035599C823662675001851CF /* ResturantViewController+Delegates.swift in Sources */,
-				035599BB2366152D001851CF /* ViewController+TabBar.swift in Sources */,
+				035599BB2366152D001851CF /* ViewController+3DTouch.swift in Sources */,
 				0365D07D23623927005729FE /* GenreCell.swift in Sources */,
 				037656B623622EDF0009DD42 /* ResturantCell.swift in Sources */,
+				0319632D2368B5A600EBEB10 /* PeekAndPopViewController.swift in Sources */,
+				0319632B2368B2D000EBEB10 /* ViewController+TabBar.swift in Sources */,
 				0376569F236216AC0009DD42 /* CityHeaderCell.swift in Sources */,
 				03E9DD2423676255001E2346 /* NetworkClient.swift in Sources */,
 				03E9DD27236764C9001E2346 /* Home.swift in Sources */,
+				031963322368BFDB00EBEB10 /* CartManager.swift in Sources */,
 				035599BD2366220D001851CF /* ResturantViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,7 +601,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.osama.FoodDelivery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.osama.FoodDeliveryx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -590,7 +620,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.osama.FoodDelivery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.osama.FoodDeliveryx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -11,7 +11,7 @@ import Foundation
 // MARK: - Home
 struct Home: Codable {
     let title: String?
-    let types: [CircleModel]?
+    var types: [CircleModel]?
 }
 
 // MARK: - TypeElement
@@ -19,4 +19,5 @@ struct CircleModel: Codable {
     let id: Int?
     let image: String?
     let title: String?
+    var isSelected: Bool? = false
 }

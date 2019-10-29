@@ -31,6 +31,9 @@
                                     <constraint firstAttribute="height" constant="30" id="MhA-te-ufb"/>
                                     <constraint firstAttribute="width" constant="40" id="wpn-3d-fOh"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naser City, Cairo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LCV-nk-19N">
                                 <rect key="frame" x="68" y="37" width="273" height="24"/>
@@ -51,6 +54,9 @@
                             <constraint firstAttribute="trailing" secondItem="Yxz-pI-Pts" secondAttribute="trailing" id="q5K-p4-TaS"/>
                             <constraint firstItem="LCV-nk-19N" firstAttribute="centerY" secondItem="xYA-Xt-M77" secondAttribute="centerY" id="yAO-le-b2x"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,6 +66,9 @@
                     <constraint firstItem="QUM-t8-O0g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HcA-vc-A1x"/>
                     <constraint firstItem="QUM-t8-O0g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="UNP-1C-Z3Z"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

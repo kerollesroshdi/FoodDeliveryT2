@@ -7,40 +7,75 @@
 //
 
 import UIKit
+import SkeletonView
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
+extension ViewController: UITableViewDelegate, SkeletonTableViewDataSource {
+
+
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        if(indexPath.section == 0){
+            return "RestTypesCell"
+        } else {
+            return "ResturantCell"
+        }
+    }
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(section == 0){
+            return 1
+        }
+        return 10
+    }
+    func numSections(in collectionSkeletonView: UITableView) -> Int {
+        return 2
+    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if(section == 0){
+        let section = HomeSections.allCases[section]
+        switch section {
+        case .topItems:
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CityHeaderCell") as! CityHeaderCell
         print("table \(header.bounds)")
         
         return header
-        } else {
+        case .restData:
             let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ResturantsHeaderCell") as! ResturantsHeaderCell
             print("table \(header.bounds)")
             return header
         }
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if(section == 0){
+        let section = HomeSections.allCases[section]
+        switch section {
+        case .topItems:
             return 60
-        } else {
-            return 100
+        case .restData:
+        return self.Resturants != nil ? 100 : 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = HomeSections.allCases[indexPath.section]
+        if case .restData = section {
+            let item = self.Resturants?[indexPath.row]
+            let view = self.storyboard?.instantiateViewController(withIdentifier: "ResturantViewController") as! ResturantViewController
+            view.data = item
+            self.navigationController?.pushViewController(view, animated: true)
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(indexPath.section == 0){
+        let section = HomeSections.allCases[indexPath.section]
+        switch section {
+        case .topItems:
             let item = self.data?.types
             let cell = tableView.dequeue() as RestTypesCell
             cell.items = item
+            
             cell.didSelectItem = { [weak self] item in
                 self?.didSelectItem(item)
             }
             return cell
-        } else {
+        case .restData:
             let item = self.Resturants?[indexPath.row]
             let cell = tableView.dequeue() as ResturantCell
             cell.configure(item)
@@ -50,15 +85,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(section == 0){
+        let section = HomeSections.allCases[section]
+        switch section {
+        case .topItems:
             return 1
-        } else {
+        case .restData:
             return Resturants?.count ?? 0
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return HomeSections.allCases.count
     }
     
     

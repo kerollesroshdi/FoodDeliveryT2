@@ -10,9 +10,11 @@ import UIKit
 
 class ResturantViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var navTitle: UILabel!
 
+    var data: Resturant?
+    var foodData: [ResturantFood]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -20,7 +22,18 @@ class ResturantViewController: UIViewController {
         tableView.registerHeaderNib(cellClass: RestDetailsHeader.self)
         tableView.registerCellNib(cellClass: FoodItemCell.self)
         tableView.separatorStyle = .none
+        loadDataForResturant(data)
         // Do any additional setup after loading the view.
+    }
+    
+    func loadDataForResturant(_ rest: Resturant?){
+        guard let id = rest?.id else { return }
+        NetworkClient.performRequest([ResturantFood].self, router: .RestFood(id: id), success: { (models) in
+            self.foodData = models
+            self.tableView.reloadSections(IndexSet(integersIn: 1...1), with: .left)
+        }) { (error) in
+            print(error)
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -34,6 +47,9 @@ class ResturantViewController: UIViewController {
         }
     }
     
+    @IBAction func didPressBack(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
 
 
 }

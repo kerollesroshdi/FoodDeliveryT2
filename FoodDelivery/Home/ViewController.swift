@@ -16,7 +16,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tabBar: CustomTabBar!
     
+    public enum HomeSections: CaseIterable {
+        case topItems
+        case restData
+    }
+
+    
     func displayError(_ text: String){
+        
         let alert = UIAlertController(title: text, message: text, preferredStyle: .alert)
         let cancel = UIAlertAction(title: "done", style: .default, handler: nil)
         alert.addAction(cancel)
@@ -25,11 +32,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // -- test area
+        let product = ResturantFood(id: 1, title: "w", image: "2", price: 10, currency: "s", quantity: 0)
+        CartManager.shared.add(product)
+        print(CartManager.shared.totalItems)
+        CartManager.shared.remove(product)
+        print(CartManager.shared.totalItems)
+        
+        // --
         tableView.delegate = self
         tableView.dataSource = self
         registerCells()
         tabBar.delegate = self
         getTopData()
+        if(traitCollection.forceTouchCapability == .available){
+            registerForPreviewing(with: self, sourceView: tableView)
+        }
+        tableView.isSkeletonable = true
+        view.showAnimatedGradientSkeleton()
+
         // Do any additional setup after loading the view.
     }
     
@@ -46,9 +68,8 @@ class ViewController: UIViewController {
         self.view.makeToastActivity(.center)
         NetworkClient.performRequest(Home.self, router: .Home, success: { (models) in
             self.view.hideToastActivity()
-            print("I got data")
-            print(models)
             self.data = models
+            self.loadFirstData()
             self.tableView.reloadData()
         }) { (error) in
             self.view.hideToastActivity()
@@ -61,10 +82,26 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    func loadFirstData(){
+        if let firstItem = self.data?.types?.first {
+            self.getResturantData(for: firstItem)
+            self.data?.types?[0].isSelected = true
+//            firstItem.isSelected = true
+            if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? RestTypesCell{
+                cell.collectionView.reloadData()
+            }
+        }
+
+    }
 
     
     func didSelectItem(_ item: CircleModel){
-        guard let id = item.id else { return }
+        getResturantData(for: item)
+    }
+    
+    private func getResturantData(for restType: CircleModel){
+        guard let id = restType.id else { return }
         self.view.makeToastActivity(.center)
         NetworkClient.performRequest([Resturant].self, router: .RestData(id: id), success: { (models) in
             self.view.hideToastActivity()
@@ -76,6 +113,8 @@ class ViewController: UIViewController {
             self.displayError(error.localizedDescription)
         }
     }
+    
+    
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if let header = tableView.headerView(forSection: 0) {

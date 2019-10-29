@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class RestTypesCell: UITableViewCell {
     var items: [CircleModel]?{
@@ -46,12 +47,18 @@ extension RestTypesCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = self.items?[indexPath.row]
        let cell = collectionView.dequeue(indexPath: indexPath) as RestTypeCell
+        if(item?.isSelected == true){
+            collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .top)
+            cell.isSelected = true
+
+        }
+        
         cell.configure(item)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items?.count ?? 0
+        return items == nil ? 10 : items?.count ?? 0
     }
     
 }

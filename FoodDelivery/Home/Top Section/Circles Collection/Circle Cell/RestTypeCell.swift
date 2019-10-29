@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import SkeletonView
+
 class RestTypeCell: UICollectionViewCell {
     
     @IBOutlet weak var img: UIImageView!
@@ -17,6 +19,7 @@ class RestTypeCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         normalCell()
+        titleLabel.isHidden = true
         
         // Initialization code
     }
@@ -27,7 +30,14 @@ class RestTypeCell: UICollectionViewCell {
     }
     
     func configure(_ model: CircleModel?){
+        DispatchQueue.main.async{
+            sleep(10)
+        }
+        self.showAnimatedGradientSkeleton()
+        
         guard let model = model else { return }
+        self.hideSkeleton()
+        titleLabel.isHidden = false
         self.titleLabel.text = model.title
         if let image = model.image {
             self.img.kf.setImage(with: URL(string: image))

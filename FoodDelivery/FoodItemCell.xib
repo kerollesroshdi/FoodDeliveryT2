@@ -80,7 +80,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="img" destination="HNO-1i-IEn" id="Tud-8N-g9F"/>
+                <outlet property="priceLabe" destination="wRa-aB-DEk" id="Sp5-my-M0a"/>
                 <outlet property="quantityView" destination="Ryq-05-aaK" id="j0x-M4-2JX"/>
+                <outlet property="titleLabel" destination="xkf-NN-8Ru" id="E3R-Ln-hUM"/>
             </connections>
             <point key="canvasLocation" x="239.85507246376812" y="131.58482142857142"/>
         </tableViewCell>

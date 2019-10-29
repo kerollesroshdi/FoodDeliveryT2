@@ -13,22 +13,23 @@ enum APIRouter: URLRequestConvertible {
     
     case Home
     case RestData(id: Int)
+    case RestFood(id: Int)
     
     var method: HTTPMethod {
         switch self {
-        case .Home:
-            return .get
-        case .RestData:
+        case .Home, .RestData, .RestFood:
             return .get
         }
     }
     
     var parameters: Parameters? {
         switch self {
-        case .Home:
-            return nil
         case .RestData(let id):
             return ["id": id]
+        case .RestFood(let id):
+            return ["id": id]
+        default:
+            return nil
         }
     }
     
@@ -38,15 +39,14 @@ enum APIRouter: URLRequestConvertible {
             return "Home"
         case .RestData:
             return "RestTypes"
+        case .RestFood:
+            return "Rest"
         }
     }
     
     var encoding: ParameterEncoding{
         switch self{
-        case .Home :
-            return URLEncoding.default
-            
-        case .RestData:
+        default:
             return URLEncoding.default
         }
 

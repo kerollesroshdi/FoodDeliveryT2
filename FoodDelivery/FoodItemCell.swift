@@ -8,9 +8,15 @@
 
 import UIKit
 
-class FoodItemCell: UITableViewCell {
+class FoodItemCell: BaseTableViewCell {
     @IBOutlet weak var quantityView: QuantityView!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var priceLabe: UILabel!
+    
+    @IBOutlet weak var img: UIImageView!
+    var item: ResturantFood?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,14 +25,28 @@ class FoodItemCell: UITableViewCell {
             switch item {
             case .plus:
                 print("pressed plus")
+                CartManager.shared.add(self.item)
             case .minus:
                 print("pressed minus")
+                CartManager.shared.remove(self.item)
             }
+            print(CartManager.shared.totalItems)
         }
         
         // Initialization code
     }
+    override func configure<T>(_ item: T?) {
+        guard let item = item as? ResturantFood else { return }
+        self.item = item
+        self.titleLabel.text = item.title
+        self.priceLabe.text = item.formattedPrice()
+        if let image = item.image {
+            img.kf.indicatorType = .activity
+            self.img.kf.setImage(with: URL(string: image))
+        }
+    }
 
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
