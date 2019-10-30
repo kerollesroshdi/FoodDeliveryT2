@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         if(traitCollection.forceTouchCapability == .available){
             registerForPreviewing(with: self, sourceView: tableView)
         }
+        
 
         // Do any additional setup after loading the view.
     }

@@ -14,11 +14,14 @@ enum APIRouter: URLRequestConvertible {
     case Home
     case RestData(id: Int)
     case RestFood(id: Int)
+    case PlaceOrder(items: [ResturantFood])
     
     var method: HTTPMethod {
         switch self {
         case .Home, .RestData, .RestFood:
             return .get
+        case .PlaceOrder:
+            return .post
         }
     }
     
@@ -28,6 +31,19 @@ enum APIRouter: URLRequestConvertible {
             return ["id": id]
         case .RestFood(let id):
             return ["id": id]
+        case .PlaceOrder(let items):
+            print("items to order:", items)
+            do {
+                let data = try JSONEncoder().encode(items)
+                print("data:", data)
+                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String : String]
+                print("json: ", json)
+                return json
+            }
+            catch let error {
+                print("Error Encoding: ", error)
+            }
+            return nil
         default:
             return nil
         }
@@ -41,11 +57,15 @@ enum APIRouter: URLRequestConvertible {
             return "RestTypes"
         case .RestFood:
             return "Rest"
+        case .PlaceOrder:
+            return "PlaceOrder"
         }
     }
     
     var encoding: ParameterEncoding{
         switch self{
+        case .PlaceOrder:
+            return JSONEncoding.default
         default:
             return URLEncoding.default
         }

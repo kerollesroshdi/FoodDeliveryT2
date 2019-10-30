@@ -20,6 +20,10 @@ struct ResturantFood: Codable {
         return "\(price ?? 0) \(currency ?? "")"
     }
     
+    func formatedTotalPrice() -> String {
+        return "\(currency ?? "") \((price ?? 0) * (quantity ?? 0))"
+    }
+    
 }
 
 extension ResturantFood: Equatable {

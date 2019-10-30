@@ -9,6 +9,11 @@
 import UIKit
 
 extension ViewController: CustomTabBarDelegate {
+    func didPressOnCart() {
+        let cartVC = self.storyboard?.instantiateViewController(withIdentifier: "CartVC") as! CartVC
+        self.navigationController?.pushViewController(cartVC, animated: true)
+    }
+    
     func didPressOnButton(type: CustomTabBar.CustomTabBarButtons) {
         switch type {
         case .home:

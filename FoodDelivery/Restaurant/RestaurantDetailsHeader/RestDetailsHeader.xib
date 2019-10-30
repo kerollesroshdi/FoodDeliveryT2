@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,26 +14,26 @@
             <rect key="frame" x="0.0" y="0.0" width="476" height="229"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="476" height="228.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="476" height="229"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9C7-sJ-jqs">
-                        <rect key="frame" x="0.0" y="0.0" width="476" height="228.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="476" height="229"/>
                         <view key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="06d-U4-vAS">
-                            <rect key="frame" x="0.0" y="0.0" width="476" height="228.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="476" height="229"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jv7-vs-mGB">
-                                    <rect key="frame" x="30" y="20" width="416" height="188"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jv7-vs-mGB">
+                                    <rect key="frame" x="30" y="20" width="416" height="189"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="100" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPe-A7-ENG">
-                                            <rect key="frame" x="0.0" y="0.0" width="416" height="73"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="100" text="Restaurant title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPe-A7-ENG">
+                                            <rect key="frame" x="0.0" y="0.0" width="416" height="32.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xWm-hk-PXv">
-                                            <rect key="frame" x="0.0" y="83" width="416" height="45"/>
+                                            <rect key="frame" x="0.0" y="63.5" width="416" height="45"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="45" id="VKd-DS-15f"/>
@@ -48,7 +46,7 @@
                                             </collectionViewFlowLayout>
                                         </collectionView>
                                         <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="240" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WPp-dw-Rok">
-                                            <rect key="frame" x="0.0" y="138" width="416" height="50"/>
+                                            <rect key="frame" x="0.0" y="139" width="416" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 - 40 Mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-Ps-Pay">
                                                     <rect key="frame" x="0.0" y="0.0" width="88.5" height="50"/>
@@ -136,6 +134,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="xWm-hk-PXv" id="Y2R-Fs-6RT"/>
+                <outlet property="deliveryTimeLabel" destination="dbS-Ps-Pay" id="SbD-EJ-NYy"/>
+                <outlet property="rateCountLabel" destination="yFs-OP-Bg3" id="jqQ-tf-Yok"/>
+                <outlet property="ratingLabel" destination="Iid-iK-ug4" id="Hmm-1a-kBL"/>
                 <outlet property="titleLbl" destination="mPe-A7-ENG" id="HqT-ce-2R5"/>
             </connections>
             <point key="canvasLocation" x="250.72463768115944" y="161.71875"/>

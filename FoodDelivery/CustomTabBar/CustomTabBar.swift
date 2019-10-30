@@ -10,6 +10,8 @@ import UIKit
 
 protocol CustomTabBarDelegate: class {
     func didPressOnButton(type: CustomTabBar.CustomTabBarButtons)
+    
+    func didPressOnCart()
 }
 
 class CustomTabBar: UIView {
@@ -63,4 +65,7 @@ class CustomTabBar: UIView {
 
     }
     
+    @IBAction func didPressOnCart(_ sender: Any) {
+        delegate?.didPressOnCart()
+    }
 }

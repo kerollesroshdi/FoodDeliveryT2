@@ -10,6 +10,9 @@ import UIKit
 
 class RestDetailsHeader: UITableViewHeaderFooterView {
     @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var deliveryTimeLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var rateCountLabel: UILabel!
     let items: [String] = ["Burger", "American", "A"]
     @IBOutlet weak var collectionView: UICollectionView!
     

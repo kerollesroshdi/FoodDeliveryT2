@@ -22,6 +22,9 @@ class ResturantViewController: UIViewController {
         tableView.registerHeaderNib(cellClass: RestDetailsHeader.self)
         tableView.registerCellNib(cellClass: FoodItemCell.self)
         tableView.separatorStyle = .none
+        tableView.layer.cornerRadius = 10
+        tableView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        navTitle.text = data?.title
         loadDataForResturant(data)
         // Do any additional setup after loading the view.
     }

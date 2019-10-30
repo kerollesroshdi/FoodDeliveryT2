@@ -11,14 +11,28 @@ import UIKit
 extension ResturantViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RestDetailsHeader") as! RestDetailsHeader
+        if section == 0 {
+            let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RestDetailsHeader") as! RestDetailsHeader
+            cell.titleLbl.text = data?.title
+            cell.deliveryTimeLabel.text = data?.deliveryTime
+            cell.ratingLabel.text = "\(data?.rating ?? 0.0)"
+            cell.rateCountLabel.text = "\(data?.ratingCount ?? 0)"
+            return cell
+        } else {
+            let cell = UITableViewHeaderFooterView()
+            cell.textLabel?.text = "Picked for you"
+            cell.contentView.backgroundColor = .white
+            cell.layer.masksToBounds = true
+            cell.layer.cornerRadius = 10
+//            cell.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            return cell
+        }
         
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if(section == 0){
-            return 190
+            return 160
         } else {
             return 40
         }
