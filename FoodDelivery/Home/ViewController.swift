@@ -33,14 +33,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // -- test area
-        let product = ResturantFood(id: 1, title: "w", image: "2", price: 10, currency: "s", quantity: 0)
-        CartManager.shared.add(product)
-        print(CartManager.shared.totalItems)
-        CartManager.shared.remove(product)
-        print(CartManager.shared.totalItems)
-        
-        // --
         tableView.delegate = self
         tableView.dataSource = self
         registerCells()
@@ -49,8 +41,6 @@ class ViewController: UIViewController {
         if(traitCollection.forceTouchCapability == .available){
             registerForPreviewing(with: self, sourceView: tableView)
         }
-        tableView.isSkeletonable = true
-        view.showAnimatedGradientSkeleton()
 
         // Do any additional setup after loading the view.
     }

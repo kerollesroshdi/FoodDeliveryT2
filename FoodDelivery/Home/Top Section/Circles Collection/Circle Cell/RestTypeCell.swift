@@ -30,7 +30,7 @@ class RestTypeCell: UICollectionViewCell {
     }
     
     func configure(_ model: CircleModel?){
-      self.showAnimatedGradientSkeleton()
+        self.showAnimatedGradientSkeleton()
         
         guard let model = model else { return }
         self.hideSkeleton()
