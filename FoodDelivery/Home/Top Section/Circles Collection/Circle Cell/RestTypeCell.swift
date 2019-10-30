@@ -30,10 +30,7 @@ class RestTypeCell: UICollectionViewCell {
     }
     
     func configure(_ model: CircleModel?){
-        DispatchQueue.main.async{
-            sleep(10)
-        }
-        self.showAnimatedGradientSkeleton()
+      self.showAnimatedGradientSkeleton()
         
         guard let model = model else { return }
         self.hideSkeleton()
