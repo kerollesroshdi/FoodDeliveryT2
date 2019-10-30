@@ -41,13 +41,13 @@ class QuantityView: UIView {
     }
     
     @IBAction func didPressOnButton(_ sender: UIButton){
-        guard validate() == true else { return }
+//        guard validate() == true else { return }
         if let selectedButton = QuantityViewItems(rawValue: sender.tag){
             switch selectedButton {
             case .plus:
                 count += 1
             case .minus:
-                count -= 1
+                count > 0 ? count -= 1 : nil
             }
             didPressOnButton?(selectedButton)
         }

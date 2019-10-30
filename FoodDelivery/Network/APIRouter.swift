@@ -14,7 +14,7 @@ enum APIRouter: URLRequestConvertible {
     case Home
     case RestData(id: Int)
     case RestFood(id: Int)
-    case PlaceOrder(items: [ResturantFood])
+    case PlaceOrder(order: Order)
     
     var method: HTTPMethod {
         switch self {
@@ -31,19 +31,20 @@ enum APIRouter: URLRequestConvertible {
             return ["id": id]
         case .RestFood(let id):
             return ["id": id]
-        case .PlaceOrder(let items):
-            print("items to order:", items)
-            do {
-                let data = try JSONEncoder().encode(items)
-                print("data:", data)
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String : String]
-                print("json: ", json)
-                return json
-            }
-            catch let error {
-                print("Error Encoding: ", error)
-            }
+        default:
             return nil
+        }
+    }
+    
+    var body: Data? {
+        switch self {
+        case .PlaceOrder(let order):
+            do {
+                return try JSONEncoder().encode(order)
+            } catch let error {
+                print("Error encoding order:", error)
+                return nil
+            }
         default:
             return nil
         }
@@ -77,6 +78,7 @@ enum APIRouter: URLRequestConvertible {
         
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
+        request.httpBody = body
         
         // Common Headers
         request.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)

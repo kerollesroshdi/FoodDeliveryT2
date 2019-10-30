@@ -31,7 +31,7 @@ class ResturantViewController: UIViewController {
     
     func loadDataForResturant(_ rest: Resturant?){
         guard let id = rest?.id else { return }
-        NetworkClient.performRequest([ResturantFood].self, router: .RestFood(id: id), success: { (models) in
+        NetworkClient.performRequest([ResturantFood].self, router: .RestFood(id: id), success: { models, message  in
             self.foodData = models
             self.tableView.reloadSections(IndexSet(integersIn: 1...1), with: .left)
         }) { (error) in

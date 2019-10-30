@@ -57,6 +57,7 @@
 		844A14452369984B00BAFC19 /* CartVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A14442369984B00BAFC19 /* CartVC+TableView.swift */; };
 		844A14482369994B00BAFC19 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A14462369994B00BAFC19 /* CartCell.swift */; };
 		844A14492369994B00BAFC19 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844A14472369994B00BAFC19 /* CartCell.xib */; };
+		C5447FF42369F04F008935D3 /* OrderItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5447FF32369F04F008935D3 /* OrderItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		844A14442369984B00BAFC19 /* CartVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartVC+TableView.swift"; sourceTree = "<group>"; };
 		844A14462369994B00BAFC19 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		844A14472369994B00BAFC19 /* CartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
+		C5447FF32369F04F008935D3 /* OrderItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItems.swift; sourceTree = "<group>"; };
 		D29C879833EEAFF547D4C952 /* Pods_FoodDelivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodDelivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21B7ECA66E74D67FB8EEFDA /* Pods-FoodDelivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.release.xcconfig"; path = "Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -255,6 +257,7 @@
 				03E9DD26236764C9001E2346 /* Home.swift */,
 				03AD213A236781360030DD18 /* Resturant.swift */,
 				0319632E2368BAFC00EBEB10 /* ResturantFood.swift */,
+				C5447FF32369F04F008935D3 /* OrderItems.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				037656A323621A740009DD42 /* RestTypesCell.swift in Sources */,
 				844A14452369984B00BAFC19 /* CartVC+TableView.swift in Sources */,
 				035599C5236625F5001851CF /* RestDetailsHeader.swift in Sources */,
+				C5447FF42369F04F008935D3 /* OrderItems.swift in Sources */,
 				030257F323662FE500A84312 /* QuantityView.swift in Sources */,
 				037656AF236221410009DD42 /* Inspectables.swift in Sources */,
 				035599B9236611C2001851CF /* AnimationsFactory.swift in Sources */,

@@ -25,10 +25,10 @@ class CartCell: UITableViewCell {
             switch item {
             case .plus:
                 print("pressed plus")
-                CartManager.shared.add(self.item)
+                CartManager.shared.addItem(self.item!)
             case .minus:
                 print("pressed minus")
-                CartManager.shared.remove(self.item)
+                CartManager.shared.removeItem(self.item!)
             }
             print(CartManager.shared.totalItems)
         }

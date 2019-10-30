@@ -12,7 +12,7 @@ import Alamofire
 
 class NetworkClient {
     
-    typealias onSuccess<T> = ( (T) -> ())
+    typealias onSuccess<T> = ( (T, String) -> ())
     typealias onFailure = ((_ error: Error) -> ())
     
     static func performRequest<T>(_ object: T.Type, router: APIRouter, success: @escaping onSuccess<T>, failure: @escaping onFailure) where T:Decodable {
@@ -31,7 +31,7 @@ class NetworkClient {
                     return
                 } else {
                     if let datax = data.data {
-                        success(datax)
+                        success(datax, data.message ?? "No Message")
                     }
                 }
             } catch let error{

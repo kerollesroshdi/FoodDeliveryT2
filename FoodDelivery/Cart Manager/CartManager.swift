@@ -10,53 +10,44 @@ import Foundation
 
 class CartManager {
     var items = [ResturantFood]()
-    
-    static let shared = CartManager()
-//    private func isArrayEmpty(_ product:ResturantFood?) -> Bool{
-//        return
-//    }
-    
-    func add(_ product: ResturantFood?){
-        guard let product = product else { return }
-        guard items.isEmpty == false else {
-            var myProduct = product
-            myProduct.quantity = 1
-            self.items.append(myProduct)
-            return
-        }
-        for (index, item) in items.enumerated() {
-            if(item == product){
-                self.items[index].quantity = (self.items[index].quantity ?? 0) + 1
-                return
-            } else {
-                var myProduct = product
-                myProduct.quantity = 1
-                self.items.append(myProduct)
-                return
-            }
 
+    static let shared = CartManager()
+
+    
+    func addItem(_ item: ResturantFood) {
+        
+        
+        if let index = items.firstIndex(where: { (arrayItem) -> Bool in
+            return arrayItem.id == item.id
+        }) {
+            items[index].quantity = items[index].quantity! + 1
+        } else {
+            var newItem = item
+            newItem.quantity = 1
+            items.append(newItem)
         }
     }
     
-    func remove(_ product: ResturantFood?){
-        guard let product = product else { return }
-        _ = items.enumerated().map { (index, item) in
-            if(item == product){
-                self.items[index].quantity = (self.items[index].quantity ?? 1) - 1
-                if(self.items[index].quantity == 0){
-                    self.items.remove(at: index)
-                }
+    func removeItem(_ item: ResturantFood) {
+        
+        if let index = items.firstIndex(where: { (arrayItem) -> Bool in
+            return arrayItem.id == item.id
+        }) {
+            if items[index].quantity! > 1 {
+                items[index].quantity = items[index].quantity! - 1
+            } else {
+                items.remove(at: index)
             }
         }
     }
     
     var totalItems: Int {
-        return items.count ?? 0
+        return items.count
     }
     
     var cartTotal: Int {
         var total: Int = 0
-        items.map({ total += (($0.price ?? 0) * ($0.quantity ?? 0)) ?? 0 })
+        items.forEach{ total += $0.price! * $0.quantity! }
         return total
     }
     

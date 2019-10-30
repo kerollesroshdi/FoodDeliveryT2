@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     
     func getTopData(){
         self.view.makeToastActivity(.center)
-        NetworkClient.performRequest(Home.self, router: .Home, success: { (models) in
+        NetworkClient.performRequest(Home.self, router: .Home, success: { (models, message) in
             self.view.hideToastActivity()
             self.data = models
             self.loadFirstData()
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
     private func getResturantData(for restType: CircleModel){
         guard let id = restType.id else { return }
         self.view.makeToastActivity(.center)
-        NetworkClient.performRequest([Resturant].self, router: .RestData(id: id), success: { (models) in
+        NetworkClient.performRequest([Resturant].self, router: .RestData(id: id), success: { (models, message) in
             self.view.hideToastActivity()
             self.Resturants = models
             self.tableView.reloadSections(IndexSet(integersIn: 1...1), with: .left)
