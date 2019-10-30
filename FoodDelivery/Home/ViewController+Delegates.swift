@@ -9,25 +9,7 @@
 import UIKit
 import SkeletonView
 
-extension ViewController: UITableViewDelegate, SkeletonTableViewDataSource {
-
-
-    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-        if(indexPath.section == 0){
-            return "RestTypesCell"
-        } else {
-            return "ResturantCell"
-        }
-    }
-    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(section == 0){
-            return 1
-        }
-        return 10
-    }
-    func numSections(in collectionSkeletonView: UITableView) -> Int {
-        return 2
-    }
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let section = HomeSections.allCases[section]
