@@ -56,7 +56,11 @@ class ResturantVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
-
+    @IBAction func edgePanned(_ sender: Any) {
+        print("restaurantVC Edge Panned")
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 

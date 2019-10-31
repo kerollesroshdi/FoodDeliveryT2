@@ -72,9 +72,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="LBc-QG-BxU" secondAttribute="bottom" constant="20" id="6f8-X2-l0q"/>
-                    <constraint firstItem="LBc-QG-BxU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GYG-ae-Ve8"/>
+                    <constraint firstItem="LBc-QG-BxU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="GYG-ae-Ve8"/>
                     <constraint firstItem="LBc-QG-BxU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="KcS-Zt-G7x"/>
-                    <constraint firstAttribute="trailing" secondItem="LBc-QG-BxU" secondAttribute="trailing" id="OD1-JQ-OJy"/>
+                    <constraint firstAttribute="trailing" secondItem="LBc-QG-BxU" secondAttribute="trailing" constant="10" id="OD1-JQ-OJy"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

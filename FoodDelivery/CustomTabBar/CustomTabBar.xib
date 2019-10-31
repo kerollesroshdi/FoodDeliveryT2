@@ -43,11 +43,11 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAZ-94-fTp">
-                            <rect key="frame" x="35" y="0.0" width="80" height="2.5"/>
+                            <rect key="frame" x="40" y="0.0" width="70" height="2.5"/>
                             <color key="backgroundColor" red="1" green="0.20784313725490194" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="2.5" id="K3c-T5-mI6"/>
-                                <constraint firstAttribute="width" constant="80" id="KSZ-pV-F2Z"/>
+                                <constraint firstAttribute="width" constant="70" id="KSZ-pV-F2Z"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yg4-T2-sZW">

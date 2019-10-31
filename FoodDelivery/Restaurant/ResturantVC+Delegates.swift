@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ResturantViewController: UITableViewDelegate, UITableViewDataSource {
+extension ResturantVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {

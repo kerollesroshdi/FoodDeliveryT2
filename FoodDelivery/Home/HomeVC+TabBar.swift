@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeVC.swift
 //  FoodDelivery
 //
 //  Created by Osama on 10/24/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ViewController: CustomTabBarDelegate {
+extension HomeVC: CustomTabBarDelegate {
     func didPressOnCart() {
         let cartVC = self.storyboard?.instantiateViewController(withIdentifier: "CartVC") as! CartVC
         self.navigationController?.pushViewController(cartVC, animated: true)

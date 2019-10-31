@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="1497" y="64"/>
         </scene>
-        <!--Resturant View Controller-->
+        <!--ResturantVC-->
         <scene sceneID="6NE-v9-bmB">
             <objects>
-                <viewController storyboardIdentifier="ResturantViewController" id="9Mf-5u-BC1" customClass="ResturantViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResturantViewController" id="9Mf-5u-BC1" customClass="ResturantVC" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XqY-Mu-bq1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,6 +159,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="n1z-RG-P4d" firstAttribute="leading" secondItem="gke-CZ-siW" secondAttribute="leading" id="BGO-wU-zUX"/>
                             <constraint firstItem="gke-CZ-siW" firstAttribute="trailing" secondItem="chT-RD-E7E" secondAttribute="trailing" id="TJP-C3-TXG"/>
@@ -175,6 +176,9 @@
                             <constraint firstAttribute="bottom" secondItem="sC2-Ic-tsK" secondAttribute="bottom" id="vsY-3W-Qwj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gke-CZ-siW"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EVU-An-QAf" appends="YES" id="kLG-83-9Bh"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="navTitle" destination="B21-3g-gwB" id="b3w-AS-84e"/>
@@ -183,6 +187,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5e-sN-1kQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="EVU-An-QAf">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="edgePanned:" destination="9Mf-5u-BC1" id="5c9-ks-K1G"/>
+                        <outlet property="delegate" destination="9Mf-5u-BC1" id="MBq-YQ-Gaj"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2244" y="64"/>
         </scene>
@@ -197,8 +208,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSu-dl-423">
                                 <rect key="frame" x="0.0" y="688" width="375" height="90"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="kgh-1z-P77">
-                                        <rect key="frame" x="15" y="5" width="345" height="80"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kgh-1z-P77">
+                                        <rect key="frame" x="15" y="5" width="345" height="75"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="l7h-xB-wjD">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
@@ -221,7 +232,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="he5-R0-h3v">
-                                                <rect key="frame" x="0.0" y="46" width="345" height="34"/>
+                                                <rect key="frame" x="0.0" y="34" width="345" height="41"/>
                                                 <color key="backgroundColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <state key="normal" title="Checkout">
@@ -242,7 +253,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="kgh-1z-P77" firstAttribute="top" secondItem="DSu-dl-423" secondAttribute="top" constant="5" id="1LN-wP-uTm"/>
-                                    <constraint firstAttribute="bottom" secondItem="kgh-1z-P77" secondAttribute="bottom" constant="5" id="Xzr-Eh-bYs"/>
+                                    <constraint firstAttribute="bottom" secondItem="kgh-1z-P77" secondAttribute="bottom" constant="10" id="Xzr-Eh-bYs"/>
                                     <constraint firstItem="kgh-1z-P77" firstAttribute="leading" secondItem="DSu-dl-423" secondAttribute="leading" constant="15" id="ev1-Mu-IbG"/>
                                     <constraint firstAttribute="trailing" secondItem="kgh-1z-P77" secondAttribute="trailing" constant="15" id="gyA-UK-eoL"/>
                                     <constraint firstAttribute="height" constant="90" id="uA4-qG-vFd"/>
@@ -274,6 +285,7 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NHC-XV-NC8" firstAttribute="trailing" secondItem="zG7-Kf-1aa" secondAttribute="trailing" id="9dK-r5-Grt"/>
                             <constraint firstItem="zG7-Kf-1aa" firstAttribute="leading" secondItem="NHC-XV-NC8" secondAttribute="leading" id="M5N-P0-MJU"/>
@@ -287,6 +299,9 @@
                             <constraint firstItem="DSu-dl-423" firstAttribute="top" secondItem="zG7-Kf-1aa" secondAttribute="bottom" id="vkG-qw-bar"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NHC-XV-NC8"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0Fq-TJ-iAu" appends="YES" id="4Vk-Wg-0Bd"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="checkoutButton" destination="he5-R0-h3v" id="rio-5n-34H"/>
@@ -295,6 +310,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kR-Cp-9aA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="0Fq-TJ-iAu">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="edgePanned:" destination="GlF-Vf-vbb" id="hKv-fn-Wiv"/>
+                        <outlet property="delegate" destination="GlF-Vf-vbb" id="N8F-9c-I9L"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3008.8000000000002" y="63.546798029556655"/>
         </scene>

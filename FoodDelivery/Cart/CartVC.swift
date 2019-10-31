@@ -25,21 +25,20 @@ class CartVC: UIViewController {
         // send request to API :
         let items = CartManager.shared.items
         let order = Order(items: items)
+        
+        self.view.makeToastActivity(.center)
+        
         NetworkClient.performRequest([Order].self, router: .PlaceOrder(order: order), success: { model, message  in
             print("message:", message)
             
-            var style: ToastStyle {
-                var style = ToastStyle()
-                style.messageColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
-                style.titleColor = .black
-                style.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 0.3016340229)
-                style.messageAlignment = .center
-                style.titleAlignment = .center
-                style.horizontalPadding = 50
-                return style
+            self.view.hideToastActivity()
+            
+            self.view.makeToast(message, duration: 3, position: .center, title: "your order is on the way", image: nil, style: ToastManager.shared.style, completion: nil)
+            
+            self.view.makeToast(message, duration: 3, position: .center, title: "your order is on the way", image: nil, style: ToastManager.shared.style) { (completed) in
+                 self.navigationController?.popViewController(animated: true)
             }
             
-            self.view.makeToast(message, duration: 2, position: .center, title: "your order is on the way", image: nil, style: style, completion: nil)
             CartManager.shared.items.removeAll()
             self.itemsTableView.reloadData()
             self.subTotalLabel.text = "0"
@@ -50,6 +49,9 @@ class CartVC: UIViewController {
         
     }
     @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func edgePanned(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
 }

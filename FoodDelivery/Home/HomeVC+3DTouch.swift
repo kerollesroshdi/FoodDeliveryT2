@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ViewController: UIViewControllerPreviewingDelegate {
+extension HomeVC: UIViewControllerPreviewingDelegate {
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         if let selectedIndex = tableView.indexPathForRow(at: location) {
             let item = self.Resturants?[selectedIndex.row]
@@ -18,12 +18,12 @@ extension ViewController: UIViewControllerPreviewingDelegate {
                 return view
 //            }
         }
-        return ViewController()
+        return HomeVC()
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         if let view = viewControllerToCommit as? PeekAndPopViewController {
-            let restView = self.storyboard?.instantiateViewController(withIdentifier: "ResturantViewController") as! ResturantViewController
+            let restView = self.storyboard?.instantiateViewController(withIdentifier: "ResturantViewController") as! ResturantVC
             restView.data = view.data
             self.navigationController?.pushViewController(restView, animated: true)
         }

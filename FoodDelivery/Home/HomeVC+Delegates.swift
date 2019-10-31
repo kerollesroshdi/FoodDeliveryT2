@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeVC.swift
 //  FoodDelivery
 //
 //  Created by Osama on 10/24/19.
@@ -9,7 +9,7 @@
 import UIKit
 import SkeletonView
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let section = HomeSections.allCases[section]
@@ -29,9 +29,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let section = HomeSections.allCases[section]
         switch section {
         case .topItems:
-            return 60
+            return 50
         case .restData:
-        return self.Resturants != nil ? 100 : 0
+        return self.Resturants != nil ? 70 : 0
         }
     }
     
@@ -39,7 +39,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let section = HomeSections.allCases[indexPath.section]
         if case .restData = section {
             let item = self.Resturants?[indexPath.row]
-            let view = self.storyboard?.instantiateViewController(withIdentifier: "ResturantViewController") as! ResturantViewController
+            let view = self.storyboard?.instantiateViewController(withIdentifier: "ResturantViewController") as! ResturantVC
             view.data = item
             self.navigationController?.pushViewController(view, animated: true)
         }

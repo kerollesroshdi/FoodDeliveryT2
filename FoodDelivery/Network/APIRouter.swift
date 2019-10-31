@@ -65,8 +65,6 @@ enum APIRouter: URLRequestConvertible {
     
     var encoding: ParameterEncoding{
         switch self{
-        case .PlaceOrder:
-            return JSONEncoding.default
         default:
             return URLEncoding.default
         }

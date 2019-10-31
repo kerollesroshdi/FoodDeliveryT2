@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var style: ToastStyle {
+            var style = ToastStyle()
+            style.messageColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+            style.titleColor = .black
+            style.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 0.3016340229)
+            style.messageAlignment = .center
+            style.titleAlignment = .center
+            style.horizontalPadding = 50
+            return style
+        }
+        
+        ToastManager.shared.style = style
+        
         return true
     }
 

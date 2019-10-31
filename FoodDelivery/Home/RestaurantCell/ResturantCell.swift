@@ -11,16 +11,29 @@ import UIKit
 class ResturantCell: UITableViewCell {
     @IBOutlet weak var restTitle: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var delivertTimeLabel: UILabel!
+    @IBOutlet weak var ratingCountLabel: UILabel!
     @IBOutlet weak var img: UIImageView!
-
     @IBOutlet weak var FoodGenreCollectionView: UICollectionView!
+    @IBOutlet weak var flow: UICollectionViewFlowLayout! {
+        didSet {
+            flow.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+    }
+    
+    let genreFont = UIFont.systemFont(ofSize: 12, weight: .bold)
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         FoodGenreCollectionView.delegate = self
         FoodGenreCollectionView.dataSource = self
         FoodGenreCollectionView.registerCellNib(cellClass: GenreCell.self)
         selectionStyle = .none
-        // Initialization code
+        
+        // collectionView Constraints:
+        FoodGenreCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        FoodGenreCollectionView.heightAnchor.constraint(equalToConstant: "GenreTextForHeight".heightOfString(usingFont: genreFont) + 22).isActive = true
+        
     }
     
     var genres = [String]()
@@ -28,11 +41,30 @@ class ResturantCell: UITableViewCell {
     func configure(_ item: Resturant?){
         guard let item = item else { return }
         restTitle.text = item.title
-        ratingLabel.text = "\(item.rating)"
-        genres = item.genres ?? []
+        delivertTimeLabel.text = item.deliveryTime
+        ratingLabel.text = "\(item.rating!)"
+        ratingCountLabel.text = "\(item.ratingCount!)"
+        
         if let image = item.image {
             img.kf.setImage(with: URL(string: image))
         }
+        
+        genres = item.genres ?? []
+        
+        if genres.count == 1 {
+            let width = genres[0].widthOfString(usingFont: genreFont)
+            FoodGenreCollectionView.widthAnchor.constraint(equalToConstant: width + 22).isActive = true
+            ratingCountLabel.isHidden = false
+        } else if genres.count == 2 {
+            let width = genres[0...1].map{ $0.widthOfString(usingFont: genreFont) }.reduce(0, +)
+            FoodGenreCollectionView.widthAnchor.constraint(equalToConstant: width + 34).isActive = true
+            ratingCountLabel.isHidden = true
+        } else if genres.count > 2 {
+            let width = genres[0...2].map{ $0.widthOfString(usingFont: genreFont) }.reduce(0, +)
+            FoodGenreCollectionView.widthAnchor.constraint(equalToConstant: width + 40).isActive = true
+            ratingCountLabel.isHidden = true
+        }
+        FoodGenreCollectionView.reloadData()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -52,7 +84,8 @@ extension ResturantCell: UICollectionViewDataSource, UICollectionViewDelegateFlo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 70, height: 15)
+         let itemStringSize = genres[indexPath.row].sizeOfString(usingFont: genreFont)
+               return CGSize(width: itemStringSize.width + 12, height: 20)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

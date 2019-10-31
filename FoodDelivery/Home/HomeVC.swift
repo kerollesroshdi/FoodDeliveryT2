@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeVC.swift
 //  FoodDelivery
 //
 //  Created by Osama on 10/24/19.
@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import Toast_Swift
 
-class ViewController: UIViewController {
+class HomeVC: UIViewController {
     var Resturants: [Resturant]?
     var data: Home?
     @IBOutlet weak var tableView: UITableView!
@@ -115,20 +115,19 @@ class ViewController: UIViewController {
             header.alpha = offset
         }
         
-        if let header = tableView.headerView(forSection: 1) as? ResturantsHeaderCell{
-            let headerOffset = tableView.rectForHeader(inSection: 1)
-            let mySecondOffset = headerOffset.origin.y
-            let offset = (scrollView.contentOffset.y / mySecondOffset)
-            print(offset)
-
+        if let header = tableView.headerView(forSection: 1) as? ResturantsHeaderCell {
+            let headerOffset = tableView.rectForRow(at: IndexPath(row: 0, section: 1))
+            let headerOffsetY = headerOffset.origin.y
+            let offset = (scrollView.contentOffset.y / headerOffsetY)
+            header.containerView.cornerRadius = 20 * (1 - offset)
+            //            print(offset)
             if(offset >= 1) {
-                header.containerView.layer.mask = nil
                 tableView.backgroundColor = .white
             } else {
-                header.containerView.layer.mask = header.cornerMask
                 tableView.backgroundColor = .clear
             }
         }
+        
     }
 
 
