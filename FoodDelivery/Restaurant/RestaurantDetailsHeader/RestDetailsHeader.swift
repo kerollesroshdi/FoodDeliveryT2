@@ -13,7 +13,7 @@ class RestDetailsHeader: UITableViewHeaderFooterView {
     @IBOutlet weak var deliveryTimeLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var rateCountLabel: UILabel!
-    let items: [String] = ["Burger", "American", "A"]
+    var items: [String] = ["Burger", "American", "A"]
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {

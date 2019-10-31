@@ -23,10 +23,13 @@ class ResturantCell: UITableViewCell {
         // Initialization code
     }
     
+    var genres = [String]()
+    
     func configure(_ item: Resturant?){
         guard let item = item else { return }
         restTitle.text = item.title
         ratingLabel.text = "\(item.rating)"
+        genres = item.genres ?? []
         if let image = item.image {
             img.kf.setImage(with: URL(string: image))
         }
@@ -44,7 +47,7 @@ extension ResturantCell: UICollectionViewDataSource, UICollectionViewDelegateFlo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(indexPath: indexPath) as GenreCell
-        
+        cell.title.text = genres[indexPath.row]
         return cell
     }
     
@@ -53,6 +56,6 @@ extension ResturantCell: UICollectionViewDataSource, UICollectionViewDelegateFlo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return genres.count
     }
 }

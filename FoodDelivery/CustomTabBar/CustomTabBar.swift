@@ -25,6 +25,7 @@ class CustomTabBar: UIView {
     @IBOutlet var containerView: UIView!
     
     @IBOutlet weak var lineViewLeading: NSLayoutConstraint!
+    @IBOutlet weak var lineViewCenterX: NSLayoutConstraint!
     
     
     @IBOutlet weak var homeButton: UIButton!
@@ -43,13 +44,15 @@ class CustomTabBar: UIView {
             nibView.frame = self.bounds
             self.addSubview(nibView)
             containerView = nibView
+
         }
     }
     
     @IBAction func didPressOnHome(_ sender: UIButton) {
         delegate?.didPressOnButton(type: .home)
         UIView.animate(withDuration: 0.4) {
-            self.lineViewLeading.constant = sender.frame.origin.x + (sender.frame.width / 2)
+//            self.lineViewLeading.constant = sender.frame.origin.x + (sender.frame.width / 2)
+            self.lineViewCenterX.constant = sender.frame.origin.x
             AnimationsFactory.animate(sender, animationType: .glow(from: 0.2))
             self.layoutIfNeeded()
         }
@@ -58,7 +61,8 @@ class CustomTabBar: UIView {
     @IBAction func didPressOnPRofile(_ sender: UIButton) {
         delegate?.didPressOnButton(type: .profile)
         UIView.animate(withDuration: 0.4) {
-            self.lineViewLeading.constant = sender.frame.origin.x + (sender.frame.width / 2)
+//            self.lineViewLeading.constant = sender.frame.origin.x + (sender.frame.width / 2)
+            self.lineViewCenterX.constant = sender.frame.origin.x
             AnimationsFactory.animate(sender, animationType: .glow(from: 0.2))
             self.layoutIfNeeded()
         }

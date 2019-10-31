@@ -42,6 +42,8 @@ class CartVC: UIViewController {
             self.view.makeToast(message, duration: 2, position: .center, title: "your order is on the way", image: nil, style: style, completion: nil)
             CartManager.shared.items.removeAll()
             self.itemsTableView.reloadData()
+            self.subTotalLabel.text = "0"
+            self.checkoutButton.isEnabled = false; self.checkoutButton.alpha = 0.4
         }) { (error) in
             print("error placing an Order : \(error)")
         }

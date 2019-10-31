@@ -17,6 +17,7 @@ extension ResturantViewController: UITableViewDelegate, UITableViewDataSource {
             cell.deliveryTimeLabel.text = data?.deliveryTime
             cell.ratingLabel.text = "\(data?.rating ?? 0.0)"
             cell.rateCountLabel.text = "\(data?.ratingCount ?? 0)"
+            cell.items = data?.genres ?? []
             return cell
         } else {
             let cell = UITableViewHeaderFooterView()

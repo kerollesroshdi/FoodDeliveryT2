@@ -11,7 +11,8 @@ import UIKit
 class ResturantViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navTitle: UILabel!
-
+    @IBOutlet weak var restaurantHeaderImage: UIImageView!
+    
     var data: Resturant?
     var foodData: [ResturantFood]?
     
@@ -25,6 +26,7 @@ class ResturantViewController: UIViewController {
         tableView.layer.cornerRadius = 10
         tableView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         navTitle.text = data?.title
+        restaurantHeaderImage.kf.setImage(with: URL(string: (data?.image)!))
         loadDataForResturant(data)
         // Do any additional setup after loading the view.
     }
