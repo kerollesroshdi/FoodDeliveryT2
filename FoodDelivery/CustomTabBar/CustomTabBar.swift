@@ -10,7 +10,6 @@ import UIKit
 
 protocol CustomTabBarDelegate: class {
     func didPressOnButton(type: CustomTabBar.CustomTabBarButtons)
-    
     func didPressOnCart()
 }
 
@@ -23,16 +22,9 @@ class CustomTabBar: UIView {
     weak var delegate: CustomTabBarDelegate?
     
     @IBOutlet var containerView: UIView!
-    
-    @IBOutlet weak var lineViewLeading: NSLayoutConstraint!
     @IBOutlet weak var lineViewCenterX: NSLayoutConstraint!
     
-    
-    @IBOutlet weak var homeButton: UIButton!
-    
-    @IBOutlet weak var lineView: UIView!
-    
-    @IBOutlet weak var buttonsContainerView: UIView!
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         print("It is working")
@@ -44,14 +36,12 @@ class CustomTabBar: UIView {
             nibView.frame = self.bounds
             self.addSubview(nibView)
             containerView = nibView
-
         }
     }
     
     @IBAction func didPressOnHome(_ sender: UIButton) {
         delegate?.didPressOnButton(type: .home)
         UIView.animate(withDuration: 0.4) {
-//            self.lineViewLeading.constant = sender.frame.origin.x + (sender.frame.width / 2)
             self.lineViewCenterX.constant = sender.frame.origin.x
             AnimationsFactory.animate(sender, animationType: .glow(from: 0.2))
             self.layoutIfNeeded()
@@ -61,12 +51,10 @@ class CustomTabBar: UIView {
     @IBAction func didPressOnPRofile(_ sender: UIButton) {
         delegate?.didPressOnButton(type: .profile)
         UIView.animate(withDuration: 0.4) {
-//            self.lineViewLeading.constant = sender.frame.origin.x + (sender.frame.width / 2)
             self.lineViewCenterX.constant = sender.frame.origin.x
             AnimationsFactory.animate(sender, animationType: .glow(from: 0.2))
             self.layoutIfNeeded()
         }
-
     }
     
     @IBAction func didPressOnCart(_ sender: Any) {

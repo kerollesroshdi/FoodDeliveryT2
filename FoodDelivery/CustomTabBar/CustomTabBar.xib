@@ -10,10 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTabBar" customModule="FoodDelivery" customModuleProvider="target">
             <connections>
-                <outlet property="buttonsContainerView" destination="Yg4-T2-sZW" id="oQp-XR-4wX"/>
                 <outlet property="containerView" destination="iN0-l3-epB" id="qMt-3i-HkP"/>
-                <outlet property="homeButton" destination="Hmm-Al-RlU" id="8uc-q3-GBr"/>
-                <outlet property="lineView" destination="xAZ-94-fTp" id="0fT-XB-QJ8"/>
                 <outlet property="lineViewCenterX" destination="ve6-pE-z7i" id="qA8-Ni-yMG"/>
             </connections>
         </placeholder>
