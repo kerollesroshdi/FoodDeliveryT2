@@ -36,7 +36,7 @@ class CartVC: UIViewController {
             self.view.makeToast(message, duration: 3, position: .center, title: "your order is on the way", image: nil, style: ToastManager.shared.style, completion: nil)
             
             self.view.makeToast(message, duration: 3, position: .center, title: "your order is on the way", image: nil, style: ToastManager.shared.style) { (completed) in
-                 self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
             }
             
             CartManager.shared.items.removeAll()
@@ -49,9 +49,10 @@ class CartVC: UIViewController {
         
     }
     @IBAction func backButtonPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func edgePanned(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
 }

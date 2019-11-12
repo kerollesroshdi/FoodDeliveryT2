@@ -36,7 +36,6 @@ class HomeVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         registerCells()
-        tabBar.delegate = self
         getTopData()
         if(traitCollection.forceTouchCapability == .available){
             registerForPreviewing(with: self, sourceView: tableView)

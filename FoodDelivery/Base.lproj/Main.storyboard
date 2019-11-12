@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lBd-sO-xa0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="13P-oK-1jO">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,7 +11,7 @@
         <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="BYZ-38-t0r" customClass="HomeVC" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,6 +320,62 @@
             </objects>
             <point key="canvasLocation" x="3008.8000000000002" y="63.546798029556655"/>
         </scene>
+        <!--MainVC-->
+        <scene sceneID="dJh-hZ-RV6">
+            <objects>
+                <viewController id="13P-oK-1jO" customClass="MainVC" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="add-mo-oeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoz-Y3-ViP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IoB-ew-FN9" customClass="CustomTabBar" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="683" width="375" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="y0u-1G-gFG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IoB-ew-FN9" firstAttribute="leading" secondItem="OMY-n9-dNt" secondAttribute="leading" id="4Wa-pg-zEX"/>
+                            <constraint firstItem="Hoz-Y3-ViP" firstAttribute="leading" secondItem="OMY-n9-dNt" secondAttribute="leading" id="6lp-aN-OTg"/>
+                            <constraint firstItem="Hoz-Y3-ViP" firstAttribute="top" secondItem="add-mo-oeQ" secondAttribute="top" id="CTf-pw-OA3"/>
+                            <constraint firstItem="OMY-n9-dNt" firstAttribute="bottom" secondItem="IoB-ew-FN9" secondAttribute="bottom" constant="5" id="FR1-uV-ypO"/>
+                            <constraint firstItem="IoB-ew-FN9" firstAttribute="trailing" secondItem="OMY-n9-dNt" secondAttribute="trailing" id="GQq-yD-Gq0"/>
+                            <constraint firstAttribute="bottom" secondItem="Hoz-Y3-ViP" secondAttribute="bottom" id="qbn-Ms-DzK"/>
+                            <constraint firstItem="OMY-n9-dNt" firstAttribute="trailing" secondItem="Hoz-Y3-ViP" secondAttribute="trailing" id="unp-eM-eTB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OMY-n9-dNt"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="Hoz-Y3-ViP" id="C1i-Hj-QgQ"/>
+                        <outlet property="tabBar" destination="IoB-ew-FN9" id="Iee-qk-vVg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFc-Xo-Fcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47.200000000000003" y="-429.31034482758622"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iVc-gY-fA7">
+            <objects>
+                <viewController storyboardIdentifier="FavouritesVC" id="reH-BS-Vic" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aJm-ky-q5W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.51764705879999995" green="0.45882352939999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6J6-tV-33s"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWg-Ye-Ron" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="-627"/>
+        </scene>
         <!--Peek And Pop View Controller-->
         <scene sceneID="2rw-DL-tvk">
             <objects>
@@ -349,12 +405,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jA1-Qr-sxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="-608"/>
+            <point key="canvasLocation" x="2244" y="771"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TYS-De-SzV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="lBd-sO-xa0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="lBd-sO-xa0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WAn-1Z-Llm">
