@@ -1,4 +1,5 @@
 ## Food Delivery
+![GitHub last commit](https://img.shields.io/github/last-commit/kerollesroshdi/FoodDeliveryT2) 
 
 an iOS app that fetch restaurants from API and let the user order the meals he/she want 
 
