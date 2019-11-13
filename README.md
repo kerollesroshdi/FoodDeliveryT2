@@ -16,6 +16,6 @@ an iOS app that fetch restaurants from API and let the user order the meals he/s
 
 <img src="Screenshots/cart.png" width="250"> <img src="Screenshots/cartcheckout.png" width="250"> <img src="Screenshots/loved.png" width="250">
 
-<img src="Screenshots/FoodDelivery.gif">
+<img src="Screenshots/FoodDelivery.gif" width="250">
 
 > I've created this app while in CodeZilla iOS workshop - Oct 2019
