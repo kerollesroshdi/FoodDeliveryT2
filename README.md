@@ -8,5 +8,6 @@ an iOS app that fetch restaurants from API and let the user order the meals he/s
  - Kingfisher
  - SkeletonView
  - custom tabBar
+ 
 
-<img src="Screenshots/cart.png" width="400">
+<img src="Screenshots/home 1.png" width="300"> <img src="Screenshots/home 2.png" width="300"> <img src="Screenshots/rest.png" width="300">
