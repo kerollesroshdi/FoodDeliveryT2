@@ -23,24 +23,14 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mI9-q4-Jrt" customClass="CustomTabBar" customModule="FoodDelivery" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="683" width="375" height="90"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="tAH-cQ-z5w"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8v6-OZ-rXQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1ui-4L-PoM"/>
-                            <constraint firstItem="mI9-q4-Jrt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="57z-tl-gz8"/>
                             <constraint firstAttribute="bottom" secondItem="8v6-OZ-rXQ" secondAttribute="bottom" id="7mH-jR-r6w"/>
-                            <constraint firstItem="mI9-q4-Jrt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7pi-ch-ic4"/>
                             <constraint firstItem="Nhp-53-8Gz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BHj-Fg-cGf"/>
                             <constraint firstAttribute="trailing" secondItem="8v6-OZ-rXQ" secondAttribute="trailing" id="ECC-I3-4Kf"/>
                             <constraint firstAttribute="bottom" secondItem="Nhp-53-8Gz" secondAttribute="bottom" id="JWt-7a-hHv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mI9-q4-Jrt" secondAttribute="bottom" constant="5" id="LKA-FC-Ya2"/>
                             <constraint firstItem="8v6-OZ-rXQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a0x-sI-MYx"/>
                             <constraint firstAttribute="trailing" secondItem="Nhp-53-8Gz" secondAttribute="trailing" id="oSo-7G-Dnq"/>
                             <constraint firstItem="Nhp-53-8Gz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wNE-CB-jLm"/>
@@ -49,7 +39,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="UlE-CG-LOS"/>
                     <connections>
-                        <outlet property="tabBar" destination="mI9-q4-Jrt" id="kmf-Ap-TDM"/>
                         <outlet property="tableView" destination="8v6-OZ-rXQ" id="bMO-3K-UuN"/>
                     </connections>
                 </viewController>
@@ -361,20 +350,45 @@
             </objects>
             <point key="canvasLocation" x="-47.200000000000003" y="-429.31034482758622"/>
         </scene>
-        <!--View Controller-->
+        <!--LovedVC-->
         <scene sceneID="iVc-gY-fA7">
             <objects>
-                <viewController storyboardIdentifier="FavouritesVC" id="reH-BS-Vic" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavouritesVC" id="reH-BS-Vic" customClass="LovedVC" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aJm-ky-q5W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.51764705879999995" green="0.45882352939999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Wa4-xj-EqY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0vp-L1-0Jt">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="reH-BS-Vic" id="eun-Ay-KSA"/>
+                                    <outlet property="delegate" destination="reH-BS-Vic" id="7sj-ai-I0a"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="0vp-L1-0Jt" firstAttribute="top" secondItem="6J6-tV-33s" secondAttribute="top" id="Ago-3Y-Fee"/>
+                            <constraint firstItem="0vp-L1-0Jt" firstAttribute="leading" secondItem="6J6-tV-33s" secondAttribute="leading" id="CG6-12-KGV"/>
+                            <constraint firstItem="Wa4-xj-EqY" firstAttribute="top" secondItem="aJm-ky-q5W" secondAttribute="top" id="O7r-vd-MeD"/>
+                            <constraint firstItem="0vp-L1-0Jt" firstAttribute="trailing" secondItem="6J6-tV-33s" secondAttribute="trailing" id="QSv-1e-HlK"/>
+                            <constraint firstAttribute="trailing" secondItem="Wa4-xj-EqY" secondAttribute="trailing" id="bsL-5t-aa5"/>
+                            <constraint firstAttribute="bottom" secondItem="Wa4-xj-EqY" secondAttribute="bottom" id="e1P-uh-7tv"/>
+                            <constraint firstItem="Wa4-xj-EqY" firstAttribute="leading" secondItem="aJm-ky-q5W" secondAttribute="leading" id="kV1-5y-DOw"/>
+                            <constraint firstAttribute="bottom" secondItem="0vp-L1-0Jt" secondAttribute="bottom" id="uff-r6-4XY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6J6-tV-33s"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="0vp-L1-0Jt" id="DtI-n5-Frv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWg-Ye-Ron" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732" y="-627"/>
+            <point key="canvasLocation" x="732" y="-627.33990147783254"/>
         </scene>
         <!--Peek And Pop View Controller-->
         <scene sceneID="2rw-DL-tvk">

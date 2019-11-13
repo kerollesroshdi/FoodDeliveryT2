@@ -14,14 +14,12 @@ class HomeVC: UIViewController {
     var Resturants: [Resturant]?
     var data: Home?
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tabBar: CustomTabBar!
     
     public enum HomeSections: CaseIterable {
         case topItems
         case restData
     }
 
-    
     func displayError(_ text: String){
         
         let alert = UIAlertController(title: text, message: text, preferredStyle: .alert)

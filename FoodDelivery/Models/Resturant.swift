@@ -16,8 +16,8 @@ struct Resturant: Codable {
     let rating: Double?
     let ratingCount: Int?
     let genres: [String]?
-    let liked, isExculsive: Bool?
-    
+    var liked: Bool?
+    let isExculsive: Bool?
     enum CodingKeys: String, CodingKey {
         case id, title, image
         case deliveryTime = "delivery_time"

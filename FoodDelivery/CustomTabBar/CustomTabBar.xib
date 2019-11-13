@@ -67,9 +67,9 @@
                                         <constraint firstAttribute="height" constant="70" id="TWF-4X-XJ6"/>
                                         <constraint firstAttribute="width" constant="70" id="Z34-7Z-zT2"/>
                                     </constraints>
-                                    <state key="normal" image="profile"/>
+                                    <state key="normal" image="loved"/>
                                     <connections>
-                                        <action selector="didPressOnPRofile:" destination="-1" eventType="touchUpInside" id="SD5-wZ-HjE"/>
+                                        <action selector="didPressOnLoved:" destination="-1" eventType="touchUpInside" id="SD5-wZ-HjE"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -126,6 +126,6 @@
         <image name="base" width="365" height="70"/>
         <image name="cart" width="82" height="81"/>
         <image name="home" width="27" height="40"/>
-        <image name="profile" width="28" height="38"/>
+        <image name="loved" width="28" height="38"/>
     </resources>
 </document>

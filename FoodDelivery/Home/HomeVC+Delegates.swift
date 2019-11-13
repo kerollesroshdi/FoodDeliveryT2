@@ -61,6 +61,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             let item = self.Resturants?[indexPath.row]
             let cell = tableView.dequeue() as ResturantCell
             cell.configure(item)
+            cell.delegate = self
             return cell
         }
         
@@ -81,4 +82,31 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+extension HomeVC: LoveRestaurantDelegate {
+    
+    func loveRestaurant(rest: Resturant) {
+        if let row = Resturants?.firstIndex(where: { (restaurant) -> Bool in
+            restaurant.id == rest.id
+            }) {
+            self.Resturants?[row].liked = true
+            let indexPath = IndexPath(row: row, section: 1)
+            tableView.reloadRows(at: [indexPath], with: .fade)
+        } else {
+            print("error love restaurant")
+        }
+    }
+    
+    func disLoveRestaurant(rest: Resturant) {
+        if let row = Resturants?.firstIndex(where: { (restaurant) -> Bool in
+            restaurant.id == rest.id
+        }) {
+            self.Resturants?[row].liked = false
+            let indexPath = IndexPath(row: row, section: 1)
+            tableView.reloadRows(at: [indexPath], with: .fade)
+        } else {
+            print("error dislove restaurant")
+        }
+    }
 }

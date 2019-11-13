@@ -16,7 +16,7 @@ protocol CustomTabBarDelegate: class {
 class CustomTabBar: UIView {
     enum CustomTabBarButtons: Int {
         case home
-        case profile
+        case loved
     }
     
     weak var delegate: CustomTabBarDelegate?
@@ -48,8 +48,8 @@ class CustomTabBar: UIView {
         }
     }
     
-    @IBAction func didPressOnPRofile(_ sender: UIButton) {
-        delegate?.didPressOnButton(type: .profile)
+    @IBAction func didPressOnLoved(_ sender: UIButton) {
+        delegate?.didPressOnButton(type: .loved)
         UIView.animate(withDuration: 0.4) {
             self.lineViewCenterX.constant = sender.frame.origin.x
             AnimationsFactory.animate(sender, animationType: .glow(from: 0.2))

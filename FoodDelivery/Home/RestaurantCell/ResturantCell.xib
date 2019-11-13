@@ -51,18 +51,21 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="392" height="22"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger Store Egypt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5E-Ak-NFc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="372" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="370" height="22"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3z-L6-vJz">
-                                                        <rect key="frame" x="372" y="0.0" width="20" height="22"/>
+                                                        <rect key="frame" x="370" y="0.0" width="22" height="22"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="20" id="xqz-54-wij"/>
+                                                            <constraint firstAttribute="width" constant="22" id="xqz-54-wij"/>
                                                         </constraints>
                                                         <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button" image="like"/>
+                                                        <connections>
+                                                            <action selector="LoveButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OHW-t7-XHc"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -242,7 +245,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2yz-t9-sw0" firstAttribute="leading" secondItem="voC-ir-QvC" secondAttribute="leading" id="1Ka-oN-kea"/>
                             <constraint firstItem="2yz-t9-sw0" firstAttribute="top" secondItem="voC-ir-QvC" secondAttribute="top" id="38O-hs-jVq"/>
@@ -254,6 +257,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="voC-ir-QvC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="027-dt-GsT"/>
                     <constraint firstItem="voC-ir-QvC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="JFm-GE-0JY"/>
@@ -261,12 +265,14 @@
                     <constraint firstAttribute="trailing" secondItem="voC-ir-QvC" secondAttribute="trailing" constant="16" id="uQw-6Z-B4O"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="FoodGenreCollectionView" destination="LeP-xq-tDs" id="cH2-bf-K4o"/>
                 <outlet property="delivertTimeLabel" destination="nku-Nz-bZz" id="puM-hE-isx"/>
                 <outlet property="flow" destination="FJv-M0-UrC" id="A76-VZ-vyF"/>
                 <outlet property="img" destination="BQf-WZ-c3C" id="5at-vv-7qM"/>
+                <outlet property="lovedButton" destination="j3z-L6-vJz" id="Tnh-A1-3dJ"/>
                 <outlet property="ratingCountLabel" destination="7Pv-YO-Tun" id="XMl-XS-vZX"/>
                 <outlet property="ratingLabel" destination="LIW-Su-Tbl" id="gVq-2y-hux"/>
                 <outlet property="restTitle" destination="g5E-Ak-NFc" id="6c3-54-k1a"/>
@@ -275,7 +281,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="like" width="23" height="20"/>
+        <image name="like" width="22.5" height="19.5"/>
         <image name="restImage" width="1800" height="1200"/>
         <image name="star" width="11" height="12"/>
     </resources>

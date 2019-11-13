@@ -51,6 +51,8 @@
 		03E9DD2423676255001E2346 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9DD2323676255001E2346 /* NetworkClient.swift */; };
 		03E9DD27236764C9001E2346 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9DD26236764C9001E2346 /* Home.swift */; };
 		3E5005ADE1EA2E95966829F8 /* Pods_FoodDelivery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29C879833EEAFF547D4C952 /* Pods_FoodDelivery.framework */; };
+		843B8B0D237BEA3000277257 /* LovedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B8B0C237BEA3000277257 /* LovedVC.swift */; };
+		843B8B10237BF70100277257 /* LovedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B8B0F237BF70100277257 /* LovedManager.swift */; };
 		843F4584236ACFD200059233 /* ResturantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843F4583236ACFD100059233 /* ResturantCell.xib */; };
 		843F4586236AD2CF00059233 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F4585236AD2CF00059233 /* String+Extension.swift */; };
 		844A1442236997C200BAFC19 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1441236997C200BAFC19 /* CartVC.swift */; };
@@ -108,6 +110,8 @@
 		03E9DD2323676255001E2346 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		03E9DD26236764C9001E2346 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		18ECCBE94E5ABF76B8F7C836 /* Pods-FoodDelivery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.debug.xcconfig"; path = "Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.debug.xcconfig"; sourceTree = "<group>"; };
+		843B8B0C237BEA3000277257 /* LovedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LovedV\U0010C.swift"; sourceTree = "<group>"; };
+		843B8B0F237BF70100277257 /* LovedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedManager.swift; sourceTree = "<group>"; };
 		843F4583236ACFD100059233 /* ResturantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResturantCell.xib; sourceTree = "<group>"; };
 		843F4585236AD2CF00059233 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		844A1441236997C200BAFC19 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
@@ -215,11 +219,13 @@
 				0376568B236214870009DD42 /* AppDelegate.swift */,
 				035599B8236611C2001851CF /* AnimationsFactory.swift */,
 				031963302368BFD400EBEB10 /* Cart Manager */,
+				843B8B0E237BEFE100277257 /* Loved Manager */,
 				037656A923621D040009DD42 /* Common */,
 				03E9DD1E23675CD2001E2346 /* Network */,
 				03E9DD2523676403001E2346 /* Models */,
 				844A14432369980B00BAFC19 /* Cart */,
 				035599BE23662296001851CF /* Home */,
+				843B8B0B237BE9C300277257 /* Loved */,
 				84DDAD1F2369CDD800152890 /* Restaurant */,
 				84DDAD202369D05A00152890 /* CustomTabBar */,
 				0376568F236214870009DD42 /* Main.storyboard */,
@@ -281,6 +287,22 @@
 				D29C879833EEAFF547D4C952 /* Pods_FoodDelivery.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		843B8B0B237BE9C300277257 /* Loved */ = {
+			isa = PBXGroup;
+			children = (
+				843B8B0C237BEA3000277257 /* LovedVC.swift */,
+			);
+			path = Loved;
+			sourceTree = "<group>";
+		};
+		843B8B0E237BEFE100277257 /* Loved Manager */ = {
+			isa = PBXGroup;
+			children = (
+				843B8B0F237BF70100277257 /* LovedManager.swift */,
+			);
+			path = "Loved Manager";
 			sourceTree = "<group>";
 		};
 		844A14432369980B00BAFC19 /* Cart */ = {
@@ -536,9 +558,11 @@
 				03AD213B236781360030DD18 /* Resturant.swift in Sources */,
 				031963342368D02400EBEB10 /* BaseTableViewCell.swift in Sources */,
 				037656A823621CFE0009DD42 /* UITableView+Extensions.swift in Sources */,
+				843B8B10237BF70100277257 /* LovedManager.swift in Sources */,
 				03AD2137236766560030DD18 /* BaseError.swift in Sources */,
 				030257F023662C8B00A84312 /* FoodItemCell.swift in Sources */,
 				037656A623621AF60009DD42 /* HomeVC+Delegates.swift in Sources */,
+				843B8B0D237BEA3000277257 /* LovedVC.swift in Sources */,
 				035599C823662675001851CF /* ResturantVC+Delegates.swift in Sources */,
 				035599BB2366152D001851CF /* HomeVC+3DTouch.swift in Sources */,
 				844A1442236997C200BAFC19 /* CartVC.swift in Sources */,
