@@ -51,6 +51,12 @@
 		03E9DD2423676255001E2346 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9DD2323676255001E2346 /* NetworkClient.swift */; };
 		03E9DD27236764C9001E2346 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9DD26236764C9001E2346 /* Home.swift */; };
 		3E5005ADE1EA2E95966829F8 /* Pods_FoodDelivery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29C879833EEAFF547D4C952 /* Pods_FoodDelivery.framework */; };
+		841F5C5F237C2F6B00934041 /* home 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 841F5C59237C2F6A00934041 /* home 2.png */; };
+		841F5C60237C2F6B00934041 /* loved.png in Resources */ = {isa = PBXBuildFile; fileRef = 841F5C5A237C2F6B00934041 /* loved.png */; };
+		841F5C61237C2F6B00934041 /* rest.png in Resources */ = {isa = PBXBuildFile; fileRef = 841F5C5B237C2F6B00934041 /* rest.png */; };
+		841F5C62237C2F6B00934041 /* home 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 841F5C5C237C2F6B00934041 /* home 1.png */; };
+		841F5C63237C2F6B00934041 /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 841F5C5D237C2F6B00934041 /* cart.png */; };
+		841F5C64237C2F6B00934041 /* cart checkout.png in Resources */ = {isa = PBXBuildFile; fileRef = 841F5C5E237C2F6B00934041 /* cart checkout.png */; };
 		843B8B0D237BEA3000277257 /* LovedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B8B0C237BEA3000277257 /* LovedVC.swift */; };
 		843B8B10237BF70100277257 /* LovedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B8B0F237BF70100277257 /* LovedManager.swift */; };
 		843F4584236ACFD200059233 /* ResturantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843F4583236ACFD100059233 /* ResturantCell.xib */; };
@@ -110,6 +116,12 @@
 		03E9DD2323676255001E2346 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		03E9DD26236764C9001E2346 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		18ECCBE94E5ABF76B8F7C836 /* Pods-FoodDelivery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.debug.xcconfig"; path = "Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.debug.xcconfig"; sourceTree = "<group>"; };
+		841F5C59237C2F6A00934041 /* home 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home 2.png"; sourceTree = "<group>"; };
+		841F5C5A237C2F6B00934041 /* loved.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loved.png; sourceTree = "<group>"; };
+		841F5C5B237C2F6B00934041 /* rest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rest.png; sourceTree = "<group>"; };
+		841F5C5C237C2F6B00934041 /* home 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home 1.png"; sourceTree = "<group>"; };
+		841F5C5D237C2F6B00934041 /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
+		841F5C5E237C2F6B00934041 /* cart checkout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart checkout.png"; sourceTree = "<group>"; };
 		843B8B0C237BEA3000277257 /* LovedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LovedV\U0010C.swift"; sourceTree = "<group>"; };
 		843B8B0F237BF70100277257 /* LovedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedManager.swift; sourceTree = "<group>"; };
 		843F4583236ACFD100059233 /* ResturantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResturantCell.xib; sourceTree = "<group>"; };
@@ -198,6 +210,7 @@
 		0376567F236214870009DD42 = {
 			isa = PBXGroup;
 			children = (
+				841F5C58237C2F4E00934041 /* Screenshots */,
 				0376568A236214870009DD42 /* FoodDelivery */,
 				03765689236214870009DD42 /* Products */,
 				2749DADA7A6A2D6950F21E00 /* Pods */,
@@ -287,6 +300,19 @@
 				D29C879833EEAFF547D4C952 /* Pods_FoodDelivery.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		841F5C58237C2F4E00934041 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				841F5C5E237C2F6B00934041 /* cart checkout.png */,
+				841F5C5D237C2F6B00934041 /* cart.png */,
+				841F5C5C237C2F6B00934041 /* home 1.png */,
+				841F5C59237C2F6A00934041 /* home 2.png */,
+				841F5C5A237C2F6B00934041 /* loved.png */,
+				841F5C5B237C2F6B00934041 /* rest.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 		843B8B0B237BE9C300277257 /* Loved */ = {
@@ -460,19 +486,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841F5C64237C2F6B00934041 /* cart checkout.png in Resources */,
 				843F4584236ACFD200059233 /* ResturantCell.xib in Resources */,
 				030257F523662FEF00A84312 /* QuantityView.xib in Resources */,
 				844A14492369994B00BAFC19 /* CartCell.xib in Resources */,
 				037656B3236227440009DD42 /* ResturantsHeaderCell.xib in Resources */,
 				035599C6236625F5001851CF /* RestDetailsHeader.xib in Resources */,
+				841F5C62237C2F6B00934041 /* home 1.png in Resources */,
 				03765696236214880009DD42 /* LaunchScreen.storyboard in Resources */,
+				841F5C60237C2F6B00934041 /* loved.png in Resources */,
 				035599B523660888001851CF /* CustomTabBar.xib in Resources */,
 				030257F123662C8B00A84312 /* FoodItemCell.xib in Resources */,
 				037656AD23621EAC0009DD42 /* RestTypeCell.xib in Resources */,
+				841F5C61237C2F6B00934041 /* rest.png in Resources */,
+				841F5C63237C2F6B00934041 /* cart.png in Resources */,
 				037656A423621A740009DD42 /* RestTypesCell.xib in Resources */,
 				037656A0236216AC0009DD42 /* CityHeaderCell.xib in Resources */,
 				0365D07E23623927005729FE /* GenreCell.xib in Resources */,
 				03765693236214880009DD42 /* Assets.xcassets in Resources */,
+				841F5C5F237C2F6B00934041 /* home 2.png in Resources */,
 				03765691236214870009DD42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
