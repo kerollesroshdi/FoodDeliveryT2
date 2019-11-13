@@ -10,4 +10,6 @@ an iOS app that fetch restaurants from API and let the user order the meals he/s
  - custom tabBar
  
 
-<img src="Screenshots/home1.png" width="200"> <img src="Screenshots/home2.png" width="200"> <img src="Screenshots/rest.png" width="200">
+<img src="Screenshots/home1.png" width="300"> <img src="Screenshots/home2.png" width="300"> <img src="Screenshots/rest.png" width="300">
+
+<img src="Screenshots/cart.png" width="300"> <img src="Screenshots/cartcheckout.png" width="300"> <img src="Screenshots/loved.png" width="300">
